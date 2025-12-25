@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/halite-and-ember-alte/static/css/main.147644dd.css",
-    "main.js": "/halite-and-ember-alte/static/js/main.31db20ee.js",
+    "main.js": "/halite-and-ember-alte/static/js/main.3d7488c9.js",
     "static/js/208.2ab3b8fb.chunk.js": "/halite-and-ember-alte/static/js/208.2ab3b8fb.chunk.js",
     "static/js/293.8233d223.chunk.js": "/halite-and-ember-alte/static/js/293.8233d223.chunk.js",
     "static/js/917.d74b5e98.chunk.js": "/halite-and-ember-alte/static/js/917.d74b5e98.chunk.js",
@@ -12,7 +12,7 @@
     "static/js/23.f93c8b41.chunk.js": "/halite-and-ember-alte/static/js/23.f93c8b41.chunk.js",
     "index.html": "/halite-and-ember-alte/index.html",
     "main.147644dd.css.map": "/halite-and-ember-alte/static/css/main.147644dd.css.map",
-    "main.31db20ee.js.map": "/halite-and-ember-alte/static/js/main.31db20ee.js.map",
+    "main.3d7488c9.js.map": "/halite-and-ember-alte/static/js/main.3d7488c9.js.map",
     "208.2ab3b8fb.chunk.js.map": "/halite-and-ember-alte/static/js/208.2ab3b8fb.chunk.js.map",
     "293.8233d223.chunk.js.map": "/halite-and-ember-alte/static/js/293.8233d223.chunk.js.map",
     "917.d74b5e98.chunk.js.map": "/halite-and-ember-alte/static/js/917.d74b5e98.chunk.js.map",
@@ -24,6 +24,6 @@
   },
   "entrypoints": [
     "static/css/main.147644dd.css",
-    "static/js/main.31db20ee.js"
+    "static/js/main.3d7488c9.js"
   ]
 }
