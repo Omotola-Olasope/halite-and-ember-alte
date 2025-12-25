@@ -12,7 +12,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/halite-and-ember-alte">
         <Header />
         <main className="main-content">
           <Routes>
