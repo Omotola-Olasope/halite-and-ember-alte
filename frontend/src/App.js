@@ -12,7 +12,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename="/halite-and-ember-alte">
+      <BrowserRouter basename={process.env.PUBLIC_URL || ""}>
         <Header />
         <main className="main-content">
           <Routes>
