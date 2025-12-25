@@ -1,0 +1,656 @@
+## 1️⃣ CHANGING COLORS
+
+### Changing the Green/Cyan Brand Color (#00FFD1)
+
+**File to Edit:** `/app/frontend/src/index.css`
+
+
+## 2️⃣ EDITING TEXT CONTENT
+
+All text content is stored in **ONE CENTRAL FILE** for easy editing!
+
+**File to Edit:** `/app/frontend/src/mock.js`
+
+This file contains ALL your website text:
+
+
+## 3️⃣ ADDING YOUR LOGO
+
+### Option A: Replace Text Logo with Image
+
+**File to Edit:** `/app/frontend/src/components/Header.jsx`
+
+**Find this (around line 28):**
+
+```jsx
+
+<Link to="/" className="dark-logo-text">
+
+Halite & Ember
+
+</Link>
+
+```
+
+**Replace with:**
+
+```jsx
+
+<Link to="/">
+
+<img
+
+src="/logo.png"
+
+alt="Halite & Ember"
+
+className="dark-logo"
+
+style={{ height: '40px' }}
+
+/>
+
+</Link>
+
+```
+
+**Then add your logo file:**
+
+1. Place your logo image (e.g., `logo.png`) in `/app/frontend/public/`
+
+2. The image will be accessible at `/logo.png`
+
+### Option B: Keep Text Logo but Style It
+
+Add this CSS to `/app/frontend/src/App.css`:
+
+```css
+
+.dark-logo-text {
+
+font-family: 'Your Font Name', sans-serif;
+
+font-size: 28px;
+
+font-weight: 700;
+
+letter-spacing: 2px;
+
+/* Add any styling you want */
+
+}
+
+```
+
+---
+
+## 4️⃣ ADDING/CHANGING IMAGES
+
+### Adding Background Images
+
+**Example: Add a background to the hero section**
+
+Edit `/app/frontend/src/App.css` and find `.hero-section` (around line 285):
+
+```css
+
+.hero-section {
+
+min-height: calc(100vh - 80px);
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+padding: 60px 7.6923%;
+
+background: var(--bg-primary);
+
+
+/* ADD THIS: */
+
+background-image: url('/your-image.jpg');
+
+background-size: cover;
+
+background-position: center;
+
+background-blend-mode: overlay;
+
+}
+
+```
+
+### Adding Images to Sections
+
+**Example: Add team member photos**
+
+Edit `/app/frontend/src/pages/UKBranch.jsx`:
+
+```jsx
+
+<div className="team-card">
+
+{/* ADD THIS: */}
+
+<img
+
+src="/team/member1.jpg"
+
+alt={member.name}
+
+style={{
+
+width: '120px',
+
+height: '120px',
+
+borderRadius: '50%',
+
+marginBottom: '16px',
+
+objectFit: 'cover'
+
+}}
+
+/>
+
+<h3 className="heading-2">{member.name}</h3>
+
+<p className="body-medium team-role">{member.role}</p>
+
+</div>
+
+```
+
+**Remember:** Place all images in `/app/frontend/public/` folder!
+
+---
+
+## 5️⃣ ADDING NEW SECTIONS
+
+### Example: Add a "Portfolio" Section to Home Page
+
+**File to Edit:** `/app/frontend/src/pages/Home.jsx`
+
+**Step 1: Add mock data** in `/app/frontend/src/mock.js`:
+
+```javascript
+
+export const mockData = {
+
+// ... existing data ...
+
+
+// ADD THIS:
+
+portfolio: [
+
+{
+
+id: 1,
+
+title: 'Luxury Apartments London',
+
+location: 'Mayfair, London',
+
+value: '£50M',
+
+image: '/portfolio/project1.jpg'
+
+},
+
+{
+
+id: 2,
+
+title: 'Commercial Complex Lagos',
+
+location: 'Victoria Island, Lagos',
+
+value: '₦2B',
+
+image: '/portfolio/project2.jpg'
+
+}
+
+]
+
+};
+
+```
+
+**Step 2: Add section in Home.jsx** (after the global section):
+
+```jsx
+
+{/* Portfolio Section */}
+
+<section className="portfolio-section">
+
+<h2 className="display-large section-title">Our Portfolio</h2>
+
+<div className="portfolio-grid">
+
+{mockData.portfolio.map((project) => (
+
+<div key={project.id} className="portfolio-card">
+
+<img src={project.image} alt={project.title} />
+
+<div className="portfolio-content">
+
+<h3 className="heading-2">{project.title}</h3>
+
+<p className="body-medium">{project.location}</p>
+
+<p className="body-large" style={{ color: 'var(--brand-primary)' }}>
+
+{project.value}
+
+</p>
+
+</div>
+
+</div>
+
+))}
+
+</div>
+
+</section>
+
+```
+
+**Step 3: Add styling** in `/app/frontend/src/App.css`:
+
+```css
+
+.portfolio-section {
+
+padding: 100px 7.6923%;
+
+background: var(--bg-primary);
+
+}
+
+.portfolio-grid {
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+gap: 40px;
+
+max-width: 1400px;
+
+margin: 0 auto;
+
+}
+
+.portfolio-card {
+
+background: var(--bg-secondary);
+
+border: 1px solid var(--border-subtle);
+
+overflow: hidden;
+
+transition: all 0.4s ease-in-out;
+
+}
+
+.portfolio-card:hover {
+
+transform: translateY(-4px);
+
+border-color: var(--brand-primary);
+
+}
+
+.portfolio-card img {
+
+width: 100%;
+
+height: 300px;
+
+object-fit: cover;
+
+}
+
+.portfolio-content {
+
+padding: 30px;
+
+display: flex;
+
+flex-direction: column;
+
+gap: 12px;
+
+}
+
+```
+
+---
+
+
+## 6️⃣ USING THE BACKEND
+
+### Understanding the Backend Structure
+
+**File:** `/app/backend/server.py`
+
+How to Add Backend Functionality
+Let me show you how to make the Contact Form work with the backend!
+
+Step 1: Add Contact Form Model to Backend
+
+Edit /app/backend/server.py and add this after the existing models (after line 38):
+
+# Contact Form Models
+class ContactMessage(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    name: str
+    email: str
+    phone: str = ""
+    subject: str
+    message: str
+    timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    status: str = "new"  # new, read, replied
+
+class ContactMessageCreate(BaseModel):
+    name: str
+    email: str
+    phone: str = ""
+    subject: str
+    message: str
+Step 2: Add Contact Form API Endpoints
+
+Add these routes before app.include_router(api_router) (around line 67):
+
+# Contact Form Routes
+@api_router.post("/contact", response_model=ContactMessage)
+async def create_contact_message(input: ContactMessageCreate):
+    """Submit a contact form message"""
+    message_dict = input.model_dump()
+    message_obj = ContactMessage(**message_dict)
+    
+    # Convert to dict and serialize datetime
+    doc = message_obj.model_dump()
+    doc['timestamp'] = doc['timestamp'].isoformat()
+    
+    await db.contact_messages.insert_one(doc)
+    return message_obj
+
+@api_router.get("/contact", response_model=List[ContactMessage])
+async def get_contact_messages():
+    """Get all contact messages (for admin)"""
+    messages = await db.contact_messages.find({}, {"_id": 0}).to_list(1000)
+    
+    # Convert timestamps back
+    for msg in messages:
+        if isinstance(msg['timestamp'], str):
+            msg['timestamp'] = datetime.fromisoformat(msg['timestamp'])
+    
+    return messages
+Step 3: Connect Frontend Contact Form to Backend
+
+Edit /app/frontend/src/pages/Contact.jsx:
+
+Find the handleSubmit function (around line 24) and replace it with:
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  
+  try {
+    // Call backend API
+    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+    const response = await fetch(`${BACKEND_URL}/api/contact`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData)
+    });
+    
+    if (response.ok) {
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      }, 3000);
+    } else {
+      alert('Failed to send message. Please try again.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('An error occurred. Please try again.');
+  }
+};
+Step 4: Add axios import at the top of Contact.jsx (after line 1):
+
+import React, { useState } from 'react';
+import axios from 'axios';  // ADD THIS
+Other Backend Examples
+Example 1: Save Newsletter Subscriptions
+
+# In server.py
+class Newsletter(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    email: str
+    subscribed_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+@api_router.post("/newsletter/subscribe")
+async def subscribe_newsletter(email: str):
+    newsletter = Newsletter(email=email)
+    doc = newsletter.model_dump()
+    doc['subscribed_at'] = doc['subscribed_at'].isoformat()
+    await db.newsletter.insert_one(doc)
+    return {"message": "Subscribed successfully"}
+Example 2: Get Properties/Projects
+
+class Property(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    title: str
+    location: str
+    price: str
+    description: str
+    image_url: str
+    status: str  # available, sold, under_offer
+
+@api_router.get("/properties", response_model=List[Property])
+async def get_properties():
+    properties = await db.properties.find({}, {"_id": 0}).to_list(100)
+    return properties
+
+@api_router.post("/properties", response_model=Property)
+async def create_property(property_data: Property):
+    doc = property_data.model_dump()
+    await db.properties.insert_one(doc)
+    return property_data
+🔧 Quick Reference Cheat Sheet
+What to Change	File Location	Line(s)
+Brand Color	/frontend/src/index.css	Line 17
+All Text Content	/frontend/src/mock.js	All
+Logo	/frontend/src/components/Header.jsx	Line 28
+Add New Page	Create new file in /frontend/src/pages/	-
+Add Backend Route	/backend/server.py	After line 67
+Contact Form Logic	/frontend/src/pages/Contact.jsx	Line 24
+Styling/CSS	/frontend/src/App.css or /frontend/src/index.css	Various
+📝 Testing Your Changes
+After making changes:
+
+Frontend changes (CSS, text, images): Save the file → Browser auto-refreshes
+Backend changes: Restart the backend server
+sudo supervisorctl restart backend
+New packages: Restart the service
+cd /app/frontend && yarn install
+sudo supervisorctl restart frontend
+
+
+## 🎨 Part 1: The Ball Animation (Spline 3D Element)
+
+Yes! You can definitely change, edit, or remove that ball animation. Let me show you all your options:
+
+### Option A: Change to a Different Animation
+
+The animation comes from Spline (a 3D design tool). You can browse thousands of free 3D animations!
+
+**File to Edit:** `/app/frontend/src/pages/Home.jsx`
+
+**Find this (around line 45):**
+
+```jsx
+
+<div className="hero-spline">
+
+<Spline scene="https://prod.spline.design/NbVmy6DPLhY-5Lvg/scene.splinecode" />
+
+</div>
+
+```
+
+**Here are some alternative Spline animations you can use:**
+
+```jsx
+
+{/* Option 1: Floating Geometric Shapes */}
+
+<Spline scene="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode" />
+
+{/* Option 2: Abstract Waves */}
+
+<Spline scene="https://prod.spline.design/BUd4jo5x2EhxXh5q/scene.splinecode" />
+
+{/* Option 3: Rotating Cube */}
+
+<Spline scene="https://prod.spline.design/ZqQ-Te4t2YuWPuBB/scene.splinecode" />
+
+{/* Option 4: Sphere with Particles */}
+
+<Spline scene="https://prod.spline.design/PqW4zo2KcWXK9lxJ/scene.splinecode" />
+
+```
+
+**To browse more animations:**
+
+1. Visit https://spline.design/community
+
+2. Find an animation you like
+
+3. Click "Get Embed Code"
+
+4. Copy the URL from the `scene=` part
+
+5. Replace it in your code
+
+### Option B: Remove the Animation Entirely
+
+If you want to remove it and just have text, simply delete or comment out the spline section:
+
+```jsx
+
+{/* Remove or comment out this entire div: */}
+
+{/*
+
+<div className="hero-spline">
+
+<Spline scene="https://prod.spline.design/NbVmy6DPLhY-5Lvg/scene.splinecode" />
+
+</div>
+
+*/}
+
+```
+
+Then update the hero layout in `/app/frontend/src/App.css` (around line 291):
+
+```css
+
+.hero-content {
+
+display: grid;
+
+grid-template-columns: 1fr; /* Change from "1fr 1fr" to just "1fr" */
+
+gap: 60px;
+
+max-width: 1400px;
+
+margin: 0 auto;
+
+align-items: center;
+
+}
+
+```
+
+### Option C: Replace with an Image
+
+Replace the Spline code with a regular image:
+
+```jsx
+
+<div className="hero-image">
+
+<img
+
+src="/hero-image.jpg"
+
+alt="Real Estate"
+
+style={{
+
+width: '100%',
+
+height: '700px',
+
+objectFit: 'cover',
+
+borderRadius: '0px'
+
+}}
+
+/>
+
+</div>
+
+```
+
+### Option D: Adjust Size/Position of Current Animation
+
+In `/app/frontend/src/App.css`, find `.hero-spline` (around line 325):
+
+```css
+
+.hero-spline {
+
+width: 100%;
+
+height: 700px; /* 👈 Change height: make it 500px, 600px, 800px, etc. */
+
+overflow: visible;
+
+position: relative;
+
+}
+
+```
+
+---
+
+
