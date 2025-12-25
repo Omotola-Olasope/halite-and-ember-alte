@@ -11,7 +11,7 @@ const Home = () => {
       <section className="hero-section">
         <div className="hero-content">
           <div className="hero-text">
-            <img src="/logo_black.png" alt="Halite & Ember" className="dark-logo"/>
+            <img src={`${process.env.PUBLIC_URL}/logo_black.png`} alt="Halite & Ember" className="dark-logo"/>
             <h1 className="display-huge">{mockData.company.name}</h1>
             <p className="hero-tagline">{mockData.company.tagline}</p>
             <p className="body-large hero-description">
