@@ -28,13 +28,13 @@ const Contact = () => {
     setLoading(true);
     setError(false);
 
-    // serviceID - templateID - form data - publicKey
+    // Send form data with the same field names as your template expects
     emailjs.send(
       'service_w6wo8ju',
       'template_pp0uzys',
       {
-        from_name: formData.name,
-        from_email: formData.email,
+        name: formData.name,
+        email: formData.email,
         phone: formData.phone,
         subject: formData.subject,
         message: formData.message
