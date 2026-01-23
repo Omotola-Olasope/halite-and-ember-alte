@@ -28,16 +28,16 @@ const Contact = () => {
     setLoading(true);
     setError(false);
 
-    // Send form data with the same field names as your template expects
+    // Match the template variable names exactly
     emailjs.send(
       'service_w6wo8ju',
       'template_pp0uzys',
       {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        subject: formData.subject,
-        message: formData.message
+        user_name: formData.name,
+        user_email: formData.email,
+        user_subject: formData.subject,
+        user_message: formData.message,
+        phone: formData.phone  // This one doesn't have a template variable, but keep it for records
       },
       'c47rwtY9rbzUAqD2t'
     )
