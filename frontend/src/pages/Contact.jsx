@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import { mockData } from '../mock';
 
 const Contact = () => {
@@ -12,6 +13,8 @@ const Contact = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -22,19 +25,48 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Mock form submission
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-      });
-    }, 3000);
+    setLoading(true);
+    setError(false);
+
+    // serviceID - templateID - form data - publicKey
+    emailjs.send(
+      'service_w6wo8ju',
+      'template_pp0uzys',
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        subject: formData.subject,
+        message: formData.message
+      },
+      'c47rwtY9rbzUAqD2t'
+    )
+    .then(() => {
+      setSubmitted(true);
+      setLoading(false);
+      
+      // Reset after 5 seconds
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      }, 5000);
+    })
+    .catch((error) => {
+      console.error('EmailJS Error:', error);
+      setError(true);
+      setLoading(false);
+      
+      // Clear error after 5 seconds
+      setTimeout(() => {
+        setError(false);
+      }, 5000);
+    });
   };
 
   return (
@@ -53,11 +85,20 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="contact-form-container">
             <h2 className="heading-1">Send us a Message</h2>
-            {submitted ? (
+            
+            {submitted && (
               <div className="success-message">
-                <p className="body-large">Thank you for your message! We'll get back to you soon.</p>
+                <p className="body-large">Message sent successfully ✅</p>
               </div>
-            ) : (
+            )}
+            
+            {error && (
+              <div className="error-message">
+                <p className="body-large">Message not sent (service error) ❌</p>
+              </div>
+            )}
+            
+            {!submitted && (
               <form onSubmit={handleSubmit} className="contact-form">
                 <div className="form-group">
                   <label htmlFor="name" className="form-label">Name</label>
@@ -118,8 +159,8 @@ const Contact = () => {
                     className="form-textarea"
                   />
                 </div>
-                <button type="submit" className="btn-primary">
-                  Send Message
+                <button type="submit" className="btn-primary" disabled={loading}>
+                  {loading ? 'Sending...' : 'Send Message'}
                   <Send size={20} />
                 </button>
               </form>
