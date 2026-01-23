@@ -12,31 +12,29 @@ import Contact from "./pages/Contact";
 
 function App() {
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const redirect = params.get("redirect");
+    const redirect = sessionStorage.getItem("redirect");
 
     if (redirect) {
+      sessionStorage.removeItem("redirect");
       window.history.replaceState(null, "", redirect);
     }
   }, []);
 
   return (
-    <div className="App">
-      <BrowserRouter basename={process.env.PUBLIC_URL || ""}>
-        <Header />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/uk-branch" element={<UKBranch />} />
-            <Route path="/nigerian-branch" element={<NigerianBranch />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <BrowserRouter basename={process.env.PUBLIC_URL || ""}>
+      <Header />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/uk-branch" element={<UKBranch />} />
+          <Route path="/nigerian-branch" element={<NigerianBranch />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
