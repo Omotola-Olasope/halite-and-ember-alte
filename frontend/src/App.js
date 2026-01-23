@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -10,6 +11,15 @@ import NigerianBranch from "./pages/NigerianBranch";
 import Contact from "./pages/Contact";
 
 function App() {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const redirect = params.get("redirect");
+
+    if (redirect) {
+      window.history.replaceState(null, "", redirect);
+    }
+  }, []);
+
   return (
     <div className="App">
       <BrowserRouter basename={process.env.PUBLIC_URL || ""}>
