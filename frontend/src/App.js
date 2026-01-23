@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -10,18 +10,20 @@ import UKBranch from "./pages/UKBranch";
 import NigerianBranch from "./pages/NigerianBranch";
 import Contact from "./pages/Contact";
 
-function App() {
+function AppContent() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     const redirect = sessionStorage.getItem("redirect");
 
     if (redirect) {
       sessionStorage.removeItem("redirect");
-      window.history.replaceState(null, "", redirect);
+      navigate(redirect, { replace: true });
     }
-  }, []);
+  }, [navigate]);
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL || ""}>
+    <>
       <Header />
       <main className="main-content">
         <Routes>
@@ -34,6 +36,14 @@ function App() {
         </Routes>
       </main>
       <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter basename={process.env.PUBLIC_URL || ""}>
+      <AppContent />
     </BrowserRouter>
   );
 }
