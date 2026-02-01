@@ -30,14 +30,14 @@ const Footer = () => {
               <Mail size={16} />
               <span>{mockData.company.email}</span>
             </div>
-            <div className="footer-contact-item">
+            {/*<div className="footer-contact-item">
               <Phone size={16} />
               <span>{mockData.company.phone}</span>
             </div>
             <div className="footer-contact-item">
               <MapPin size={16} />
               <span>{mockData.company.address}</span>
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>

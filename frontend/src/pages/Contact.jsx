@@ -178,7 +178,7 @@ const Contact = () => {
                   <p className="body-medium">{mockData.company.email}</p>
                 </div>
               </div>
-              <div className="contact-detail-item">
+              {/* <div className="contact-detail-item">
                 <Phone size={24} />
                 <div>
                   <h3 className="heading-3">Phone</h3>
@@ -191,7 +191,7 @@ const Contact = () => {
                   <h3 className="heading-3">Headquarters</h3>
                   <p className="body-medium">{mockData.company.address}</p>
                 </div>
-              </div>
+              </div>*/}
             </div>
 
             <div className="branch-contacts">
