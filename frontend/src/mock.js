@@ -4,8 +4,8 @@ export const mockData = {
     tagline: 'Building Value, Creating Spaces, Delivering Excellence',
     description: 'Leading the future of real estate acquisition, asset management, and tech-driven business consulting across the UK and Nigeria.',
     email: 'inquiries@haliteandember.co.uk',
-    phone: '+44 74 2577 5940',
-    address: 'London, United Kingdom'
+    phone: '',
+    address: ''
   },
   
   services: [
@@ -32,7 +32,7 @@ export const mockData = {
   ukBranch: {
     title: 'United Kingdom Operations',
     description: 'Our UK operations serve as the company’s strategic base, focusing on property acquisition, asset ownership, and professional consultancy. From here, we pursue disciplined, long-term investments and deliver advisory and technology-driven solutions with a strong emphasis on quality, governance, and trust.',
-    address: '610 Bath House, 5, Arboretum Place, Barking, London IG11 7PS, United Kingdom',
+    address: 'London, United Kingdom',
     phone: '+44 74 2577 5940',
     email: 'inquiries@haliteandember.co.uk',
     team: [
@@ -50,7 +50,7 @@ export const mockData = {
   nigerianBranch: {
     title: 'Nigerian Operations',
     description: 'Our presence in Nigeria reflects a long-term commitment to thoughtful asset acquisition and service delivery within a dynamic and evolving market. We approach opportunities with local insight, operational discipline, and a human-first mindset, focusing on sustainable growth, trust, and enduring value rather than short-term gains.',
-    address: 'Agege, Lagos, Nigeria',
+    address: 'Lagos, Nigeria',
     phone: '+234 816 725 9681',
     email: 'inquiries@haliteandember.co.uk',
     team: [
