@@ -3,7 +3,7 @@ export const mockData = {
     name: 'Halite & Ember',
     tagline: 'Building Value, Creating Spaces, Delivering Excellence',
     description: 'Leading the future of real estate acquisition, asset management, and tech-driven business consulting across the UK and Nigeria.',
-    email: 'inquiries@haliteandember.co.uk',
+    email: 'inquiries@haliteandember.com',
     phone: '',
     address: ''
   },
@@ -34,7 +34,7 @@ export const mockData = {
     description: 'Our UK operations serve as the company’s strategic base, focusing on property acquisition, asset ownership, and professional consultancy. From here, we pursue disciplined, long-term investments and deliver advisory and technology-driven solutions with a strong emphasis on quality, governance, and trust.',
     address: 'London, United Kingdom',
     phone: '+44 74 2577 5940',
-    email: 'inquiries@haliteandember.co.uk',
+    email: 'uk@haliteandember.com',
     team: [
       { name: 'Omotola Olasope', role: 'Chairman' },
       { name: 'Sadiat Ayomide Olasope', role: 'Managing Director' },
@@ -52,7 +52,7 @@ export const mockData = {
     description: 'Our presence in Nigeria reflects a long-term commitment to thoughtful asset acquisition and service delivery within a dynamic and evolving market. We approach opportunities with local insight, operational discipline, and a human-first mindset, focusing on sustainable growth, trust, and enduring value rather than short-term gains.',
     address: 'Lagos, Nigeria',
     phone: '+234 816 725 9681',
-    email: 'inquiries@haliteandember.co.uk',
+    email: 'ng@haliteandember.com',
     team: [
       { name: 'Omotola Olasope', role: 'Chairman' },
       { name: 'Sadiat Ayomide Olasope', role: 'Managing Director' },
