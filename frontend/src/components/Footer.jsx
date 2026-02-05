@@ -43,7 +43,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2025 Halite & Ember. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Halite & Ember Ltd. All rights reserved.</p>
       </div>
     </footer>
   );
