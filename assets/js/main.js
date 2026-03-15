@@ -102,12 +102,21 @@ if (contactForm) {
       const submitBtn = contactForm.querySelector('.form__submit');
       const btnText = submitBtn.querySelector('.btn-text');
       const btnIcon = submitBtn.querySelector('i');
+      const messageField = contactForm.querySelector('textarea');
 
       submitBtn.disabled = true;
       if (btnText) btnText.textContent = 'Sending...';
       if (btnIcon) btnIcon.className = 'fa-solid fa-circle-notch fa-spin';
 
-      emailjs.sendForm('service_w6wo8ju', 'template_pp0uzys', '#contact-form', 'c47rwtY9rbzUAqD2t')
+      // Manually map form values to template variable names
+      const templateParams = {
+        user_name: contactName.value,
+        user_email: contactEmail.value,
+        user_subject: contactProject.value,
+        user_message: messageField ? messageField.value : ''
+      };
+
+      emailjs.send('service_w6wo8ju', 'template_pp0uzys', templateParams, 'c47rwtY9rbzUAqD2t')
         .then(() => {
           contactMessage.classList.remove('color-red');
           contactMessage.classList.add('color-blue');
@@ -120,8 +129,6 @@ if (contactForm) {
           contactName.value = '';
           contactEmail.value = '';
           contactProject.value = '';
-
-          const messageField = contactForm.querySelector('textarea');
           if (messageField) messageField.value = '';
 
           setTimeout(() => { contactMessage.textContent = ''; }, 5000);
