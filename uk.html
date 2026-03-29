@@ -3,26 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Halite & Ember in the United Kingdom — Delivering trusted property services with integrity, quality, and care across the UK market." />
-  <meta property="og:title" content="Halite & Ember United Kingdom" />
-  <meta property="og:description" content="Trusted property stewardship in one of the world's most established markets." />
-  <title>Halite &amp; Ember Ltd</title>
+  <meta name="description" content="Halite &amp; Ember in the United Kingdom: IT services, real estate, management consultancy, and business support across England and Wales." />
+  <meta property="og:title" content="Halite &amp; Ember, United Kingdom" />
+  <meta property="og:description" content="Halite &amp; Ember in the United Kingdom: IT services, real estate, management consultancy, and business support across England and Wales." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://haliteandember.com/uk.html" />
+  <meta property="og:image" content="https://haliteandember.com/assets/img/logo-dark.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Halite &amp; Ember, United Kingdom" />
+  <meta name="twitter:description" content="Halite &amp; Ember in the United Kingdom: IT services, real estate, management consultancy, and business support across England and Wales." />
+  <meta name="twitter:image" content="https://haliteandember.com/assets/img/logo-dark.png" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://haliteandember.com/uk.html" />
+  <title>Halite &amp; Ember UK</title>
 
-  <!-- Favicon -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Halite & Ember",
+    "url": "https://haliteandember.com/uk.html",
+    "logo": "https://haliteandember.com/assets/img/logo-dark.png",
+    "description": "A multi-disciplinary professional firm delivering IT services, real estate, management consultancy, and business support across England and Wales.",
+    "email": "inquiries@haliteandember.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB"
+    },
+    "areaServed": "United Kingdom"
+  }
+  </script>
+
   <link rel="icon" href="assets/img/logo-dark.png" type="image/png" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/styles.css" />
 
-  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>emailjs.init('c47rwtY9rbzUAqD2t');</script>
 </head>
@@ -30,448 +50,299 @@
 
   <!-- ========== NAVIGATION ========== -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
-    <div class="nav__container">
-
-      <a href="index.html" class="nav__logo" aria-label="Halite & Ember Home">
-        <img src="assets/img/logo-dark.png" alt="Halite & Ember" class="logo-for-dark" />
-        <img src="assets/img/logo-light.png" alt="Halite & Ember" class="logo-for-light" />
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Halite &amp; Ember Home">
+        <img src="assets/img/logo-dark.png" alt="Halite &amp; Ember" class="logo-dark" />
+        <img src="assets/img/logo-light.png" alt="Halite &amp; Ember" class="logo-light" />
       </a>
 
       <ul class="nav__links" role="list">
-        <li><a href="index.html#about" class="nav__link">About</a></li>
-        <li><a href="index.html#values" class="nav__link">Values</a></li>
-        <li><a href="#uk-services" class="nav__link" data-section="uk-services">Services</a></li>
+        <li><a href="#overview" class="nav__link" data-section="overview">Overview</a></li>
+        <li><a href="#services" class="nav__link" data-section="services">Services</a></li>
+        <li><a href="#why" class="nav__link" data-section="why">Why UK</a></li>
         <li><a href="#contact" class="nav__link" data-section="contact">Contact</a></li>
       </ul>
 
       <div class="nav__actions">
         <div class="nav__countries" aria-label="Select country">
-          <a href="uk.html" class="nav__country-btn active" aria-current="page">🇬🇧 UK</a>
+          <a href="uk.html" class="nav__country" aria-current="page" style="color: var(--accent);">UK</a>
           <span class="nav__country-sep">|</span>
-          <a href="nigeria.html" class="nav__country-btn">🇳🇬 Nigeria</a>
+          <a href="nigeria.html" class="nav__country">NG</a>
         </div>
-
-        <button class="nav__theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <button class="nav__theme" id="theme-toggle" aria-label="Toggle theme">
           <i class="fa-solid fa-sun icon-sun"></i>
           <i class="fa-solid fa-moon icon-moon"></i>
         </button>
-
         <button class="nav__hamburger" id="nav-hamburger" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
       </div>
-
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div class="nav__mobile" id="nav-mobile" role="navigation" aria-label="Mobile navigation">
-    <a href="index.html#about" class="nav__mobile-link">About</a>
-    <a href="index.html#values" class="nav__mobile-link">Values</a>
-    <a href="#uk-services" class="nav__mobile-link">Services</a>
+  <nav class="nav__mobile" id="nav-mobile" aria-label="Mobile navigation">
+    <a href="#overview" class="nav__mobile-link">Overview</a>
+    <a href="#services" class="nav__mobile-link">Services</a>
+    <a href="#why" class="nav__mobile-link">Why UK</a>
     <a href="#contact" class="nav__mobile-link">Contact</a>
-    <div class="nav__mobile-countries">
-      <a href="uk.html" class="nav__mobile-link" style="border-bottom:none;padding:0.9rem 0;">🇬🇧 United Kingdom</a>
-      <a href="nigeria.html" class="nav__mobile-link" style="border-bottom:none;padding:0.9rem 0;">🇳🇬 Nigeria</a>
-    </div>
-  </div>
+    <a href="index.html" class="nav__mobile-link">&#8592; Back to Home</a>
+    <a href="nigeria.html" class="nav__mobile-link">Nigeria</a>
+  </nav>
+
+  <main id="main-content">
 
   <!-- ========== HERO ========== -->
-  <section class="country-hero" aria-label="United Kingdom operations">
-    <div class="country-hero__bg" aria-hidden="true">
-      <div class="country-hero__grid"></div>
-      <div class="country-hero__glow"></div>
-    </div>
-
-    <div class="country-hero__content">
-      <nav class="country-hero__breadcrumb reveal" aria-label="Breadcrumb">
-        <a href="index.html">Home</a>
-        <i class="fa-solid fa-chevron-right"></i>
-        <span>United Kingdom</span>
-      </nav>
-
-      <!-- <div class="country-hero__flag reveal" aria-hidden="true">🇬🇧</div> -->
-
-      <h1 class="country-hero__title reveal reveal-delay-1">
-        Halite &amp; Ember Ltd<br /><em>United Kingdom</em>
-      </h1>
-
-      <p class="country-hero__body reveal reveal-delay-2">
-        Bringing trusted property partnership to one of the world's most established and dynamic real estate markets, with the integrity, standards, and care you deserve.
-      </p>
+  <section class="country-hero" aria-label="United Kingdom hero">
+    <div class="country-hero__orb" aria-hidden="true"></div>
+    <div class="container">
+      <div class="country-hero__content">
+        <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>United Kingdom</span>
+        </nav>
+        <div class="country-hero__icon reveal reveal-delay-1" aria-hidden="true">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <h1 class="country-hero__title reveal reveal-delay-2">
+          Halite &amp; Ember<br><em>United Kingdom</em>
+        </h1>
+        <p class="country-hero__body reveal reveal-delay-3">
+          Registered in England and Wales, our UK entity delivers IT services, real estate, management consultancy, and business support to organisations that demand quality, accountability, and results.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- ========== OVERVIEW ========== -->
-  <section class="country-overview section" id="uk-overview" aria-labelledby="uk-overview-title">
+  <section class="section country-overview" id="overview">
     <div class="container">
-
-      <div class="coming-soon-banner reveal">
-        <i class="fa-solid fa-circle-info"></i>
-        <span>We are currently in pre-launch phase. <strong>Full UK services launching soon.</strong> Reach out to register your interest or enquire about our upcoming offerings.</span>
-      </div>
-
       <div class="country-overview__grid">
+        <div>
+          <span class="label reveal">UK Operations</span>
+          <h2 class="display reveal reveal-delay-1" style="font-size: clamp(2rem, 4vw, 3rem); margin: 0.5rem 0 1.25rem;">
+            British roots,<br><em>global perspective.</em>
+          </h2>
+          <p class="about__body reveal reveal-delay-2">
+            Halite &amp; Ember Ltd is registered in England and Wales and operates as a full-service firm for organisations that demand quality, accountability, and results. We serve a broad client base: from domestic SMEs navigating digital transformation to diaspora entrepreneurs building bridges between the UK and Africa.
+          </p>
+          <p class="about__body reveal reveal-delay-3">
+            Our approach is relational, not transactional. We invest time in understanding your context before we recommend solutions.
+          </p>
 
-        <div class="reveal">
-          <p class="section__label">UK Market</p>
-          <h2 class="section__title" id="uk-overview-title">Property with Purpose,<br />Across the United Kingdom</h2>
-          <p class="section__subtitle" style="margin-bottom:1.5rem;">
-            The United Kingdom offers one of the most mature and transparent property markets in the world, a market where trust, compliance, and quality of service define the best operators.
-          </p>
-          <p class="about__body" style="color:var(--text-secondary);line-height:1.85;">
-            Halite &amp; Ember Ltd is registered in the UK and poised to serve clients across this market. We are committed to operating at the highest standards, providing clients and tenants with honest, professional, and genuinely caring property services.
-          </p>
-          <p class="about__body" style="color:var(--text-secondary);line-height:1.85;margin-top:1rem;">
-            From our base, we will work with landlords, investors, and residents who believe that property management should be more than a transaction, it should be a partnership.
-          </p>
         </div>
 
         <div class="reveal reveal-delay-2">
-          <div class="country-stats">
-            <div class="stat-box">
-              <div class="stat-box__value">£1.7T+</div>
-              <div class="stat-box__label">UK Property Market</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-box__value">4.6M</div>
-              <div class="stat-box__label">Private Rented Homes</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-box__value">Top 5</div>
-              <div class="stat-box__label">Global Real Estate Market</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-box__value">Halite &amp; Ember Ltd</div>
-              <div class="stat-box__label">Registered Entity</div>
+          <div class="about__mission" style="margin-top: 0;">
+            <div class="about__mission-label">UK Entity</div>
+            <p class="about__mission-text">Halite &amp; Ember Ltd, registered in England &amp; Wales. Company number 16634355. We operate under the full requirements of UK company law and governance standards.</p>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <div class="about__mission">
+              <div class="about__mission-label">SIC Codes</div>
+              <p class="about__mission-text">62090 - Other information technology service activities <br>68100 - Buying and selling of own real estate <br>70229 - Management consultancy activities <br>82990 - Other business support</p>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
-
-  <div class="divider"></div>
 
   <!-- ========== SERVICES ========== -->
-  <section class="country-services section" id="uk-services" aria-labelledby="uk-services-title">
+  <section class="section country-services" id="services">
     <div class="container">
-      <div class="reveal">
-        <p class="section__label">What We Offer</p>
-        <h2 class="section__title" id="uk-services-title">Services in the United Kingdom</h2>
-        <p class="section__subtitle">
-          Our UK portfolio of services is designed around what clients truly need, transparency, quality, and a property partner they can rely on.
-        </p>
-      </div>
+      <span class="label reveal">What We Offer</span>
+      <h2 class="display reveal reveal-delay-1" style="font-size: clamp(2rem, 4vw, 3rem); margin: 0.5rem 0 0;">
+        Services in the<br><em>United Kingdom</em>
+      </h2>
 
-      <div class="services__grid">
+      <div class="services-grid">
+        <div class="svc-card reveal">
+          <div class="svc-card__icon"><i class="fa-solid fa-microchip"></i></div>
+          <div class="svc-card__title">IT Services</div>
+          <p class="svc-card__body">Infrastructure, software delivery, systems integration, and digital transformation for UK businesses and organisations ready to operate with confidence in the modern economy.</p>
+          <span class="svc-card__badge">SIC 62090</span>
+        </div>
 
-        <article class="service-card reveal reveal-delay-1">
-          <div class="service-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-magnifying-glass-dollar"></i>
-          </div>
-          <h3 class="service-card__title">Property Acquisition</h3>
-          <p class="service-card__body">
-            Supporting clients in identifying, evaluating, and acquiring residential and commercial properties across key UK markets, with rigorous due diligence and honest counsel.
-          </p>
-          <span class="service-card__badge">Coming Soon</span>
-        </article>
+        <div class="svc-card reveal reveal-delay-1">
+          <div class="svc-card__icon"><i class="fa-solid fa-building"></i></div>
+          <div class="svc-card__title">Real Estate</div>
+          <p class="svc-card__body">Property acquisition, development management, and consultancy across England and Wales. We identify and unlock value in residential and commercial assets.</p>
+          <span class="svc-card__badge">SIC 68100</span>
+        </div>
 
-        <article class="service-card reveal reveal-delay-2">
-          <div class="service-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-house-chimney-user"></i>
-          </div>
-          <h3 class="service-card__title">Property Management</h3>
-          <p class="service-card__body">
-            Comprehensive, end-to-end management for landlords and property owners, tenant sourcing, compliance, maintenance coordination, and proactive stewardship of your asset.
-          </p>
-          <span class="service-card__badge">Coming Soon</span>
-        </article>
+        <div class="svc-card reveal reveal-delay-2">
+          <div class="svc-card__icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="svc-card__title">Management Consultancy</div>
+          <p class="svc-card__body">Strategic advisory, operational improvement, and leadership support for ambitious teams navigating growth, change, or entry into new markets.</p>
+          <span class="svc-card__badge">SIC 70229</span>
+        </div>
 
-        <article class="service-card reveal reveal-delay-3">
-          <div class="service-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-hammer"></i>
-          </div>
-          <h3 class="service-card__title">Property Renovation</h3>
-          <p class="service-card__body">
-            Thoughtful refurbishment and enhancement projects that unlock value, improve livability, and ensure every property reflects our standard of excellence.
-          </p>
-          <span class="service-card__badge">Coming Soon</span>
-        </article>
-
-        <article class="service-card reveal reveal-delay-1">
-          <div class="service-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-chart-line"></i>
-          </div>
-          <h3 class="service-card__title">Investment Consultancy</h3>
-          <p class="service-card__body">
-            Helping investors navigate the UK property landscape, yield analysis, market research, and strategic guidance for portfolio growth with a long-term perspective.
-          </p>
-          <span class="service-card__badge">Coming Soon</span>
-        </article>
-
-        <article class="service-card reveal reveal-delay-2">
-          <div class="service-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-people-roof"></i>
-          </div>
-          <h3 class="service-card__title">Tenant Welfare</h3>
-          <p class="service-card__body">
-            Beyond compliance, we champion tenant experience, ensuring homes are safe, maintained, and managed with the respect every resident deserves.
-          </p>
-          <span class="service-card__badge">Coming Soon</span>
-        </article>
-
-        <article class="service-card reveal reveal-delay-3">
-          <div class="service-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-handshake"></i>
-          </div>
-          <h3 class="service-card__title">Diaspora Property Support</h3>
-          <p class="service-card__body">
-            Specialist support for clients based overseas who wish to invest or manage property in the UK, bridging distance with local expertise and trusted representation.
-          </p>
-          <span class="service-card__badge">Coming Soon</span>
-        </article>
-
+        <div class="svc-card reveal reveal-delay-3">
+          <div class="svc-card__icon"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="svc-card__title">Business Support</div>
+          <p class="svc-card__body">Administration, compliance, HR, and operational support for businesses that need the scaffolding to grow without distraction. We handle the detail so you can focus on the work.</p>
+          <span class="svc-card__badge">SIC 82990</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
-  <!-- ========== WHY ========== -->
-  <section class="country-why section" id="uk-why" aria-labelledby="uk-why-title">
+  <!-- ========== WHY UK ========== -->
+  <section class="section country-why" id="why">
     <div class="container">
       <div class="why__grid">
-
-        <div class="reveal">
-          <p class="section__label">Our Advantage</p>
-          <h2 class="section__title" id="uk-why-title">Why Halite &amp; Ember<br />in the UK</h2>
+        <div>
+          <span class="label reveal">Our Commitment</span>
+          <h2 class="display reveal reveal-delay-1" style="font-size: clamp(2rem, 4vw, 3rem); margin: 0.5rem 0 2rem;">
+            Why work with us<br>in the <em>UK</em>?
+          </h2>
 
           <div class="why__list">
-            <div class="why__item reveal reveal-delay-1">
-              <div class="why__item-number">01</div>
-              <div class="why__item-body">
-                <h3 class="why__item-title">Values-Led from Day One</h3>
-                <p class="why__item-text">We are not here to be the largest, we are here to be the most trusted. Our H.E.A.R.T. framework is not marketing language; it is how we operate every single day.</p>
-              </div>
-            </div>
-
             <div class="why__item reveal reveal-delay-2">
-              <div class="why__item-number">02</div>
-              <div class="why__item-body">
-                <h3 class="why__item-title">Committed to UK Standards</h3>
-                <p class="why__item-text">We operate with full respect for UK regulations, consumer protections, and property law, ensuring every client and tenant interaction reflects current best practice.</p>
+              <span class="why__item-num">01</span>
+              <div>
+                <div class="why__item-title">Registered and Accountable</div>
+                <p class="why__item-text">We are a fully registered UK company operating under English law. Clients engage with a professional entity that takes governance and compliance seriously.</p>
               </div>
             </div>
-
             <div class="why__item reveal reveal-delay-3">
-              <div class="why__item-number">03</div>
-              <div class="why__item-body">
-                <h3 class="why__item-title">People-First Property</h3>
-                <p class="why__item-text">We measure success not just in transactions completed, but in tenants who feel cared for and clients who feel heard, relationships built to last.</p>
+              <span class="why__item-num">02</span>
+              <div>
+                <div class="why__item-title">Diaspora Intelligence</div>
+                <p class="why__item-text">We understand the unique challenges of African diaspora clients navigating UK systems. Our team bridges that gap with empathy and genuine expertise.</p>
               </div>
             </div>
-
             <div class="why__item reveal reveal-delay-4">
-              <div class="why__item-number">04</div>
-              <div class="why__item-body">
-                <h3 class="why__item-title">International Perspective, Local Focus</h3>
-                <p class="why__item-text">Our dual-market presence gives us a broader understanding of property dynamics, while keeping our UK clients at the centre of our attention and expertise.</p>
+              <span class="why__item-num">03</span>
+              <div>
+                <div class="why__item-title">Cross-Border Capability</div>
+                <p class="why__item-text">With operations in both the UK and Nigeria, we are uniquely placed to support clients whose work and lives span both markets.</p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="why__visual reveal reveal-delay-2">
-          <div class="why__visual-monogram">
-            <img src="assets/img/logo-dark.png" alt="Halite & Ember" class="logo-for-dark" />
-          </div>
-          <p class="why__visual-text">
-            "In the United Kingdom, our commitment is simple, to be the kind of property company we would want managing our own homes."
-          </p>
+          <div class="why__visual-mono"><img src="./assets/img/logo-dark.png" alt=""></div>
+          <p class="why__visual-quote">"Registered in the UK. Committed to the world. Driven by the same values everywhere we operate."</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
   <!-- ========== CONTACT ========== -->
-  <section class="contact section" id="contact" aria-labelledby="uk-contact-title">
+  <section class="section contact" id="contact" aria-labelledby="contact-heading-uk">
     <div class="container">
       <div class="contact__grid">
-
-        <div class="contact__info reveal">
-          <p class="section__label">United Kingdom</p>
-          <h2 class="contact__info-title" id="uk-contact-title">Reach Our UK Team</h2>
-          <p class="contact__info-body">
-            Have a UK property enquiry? Whether you are a landlord, investor, or looking for a trusted management partner, we would love to hear from you.
+        <div class="contact__info">
+          <span class="label reveal">UK Enquiries</span>
+          <h2 class="contact__info-title reveal reveal-delay-1" id="contact-heading-uk">
+            Talk to our<br><em>UK team.</em>
+          </h2>
+          <p class="contact__info-body reveal reveal-delay-2">
+            Ready to explore a project, partnership, or service in the UK? We would love to connect.
           </p>
-
-          <div class="contact__detail">
-            <div class="contact__detail-icon" aria-hidden="true">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
+          <div class="contact__detail reveal reveal-delay-3">
+            <div class="contact__detail-icon"><i class="fa-solid fa-envelope"></i></div>
             <div>
               <div class="contact__detail-label">Email</div>
               <div class="contact__detail-value">uk@haliteandember.com</div>
             </div>
           </div>
-
-          <div class="contact__detail">
-            <div class="contact__detail-icon" aria-hidden="true">
-              <i class="fa-solid fa-building"></i>
-            </div>
-            <div>
-              <div class="contact__detail-label">Entity</div>
-              <div class="contact__detail-value">Halite &amp; Ember Ltd</div>
-            </div>
-          </div>
-
-          <div class="contact__detail">
-            <div class="contact__detail-icon" aria-hidden="true">
-              <i class="fa-solid fa-flag"></i>
-            </div>
+          <div class="contact__detail reveal reveal-delay-4">
+            <div class="contact__detail-icon"><i class="fa-solid fa-location-dot"></i></div>
             <div>
               <div class="contact__detail-label">Registered</div>
-              <div class="contact__detail-value">England &amp; Wales</div>
-            </div>
-          </div>
-
-          <div class="contact__detail">
-            <div class="contact__detail-icon" aria-hidden="true">
-              <i class="fa-solid fa-phone"></i>
-            </div>
-            <div>
-              <div class="contact__detail-label">Phone</div>
-              <div class="contact__detail-value">+44 742 577 5940</div>
+              <div class="contact__detail-value">England &amp; Wales, United Kingdom</div>
             </div>
           </div>
         </div>
 
-        <div class="contact__form-wrap reveal reveal-delay-2">
-          <form id="contact-form" novalidate>
-
-            <div class="form__row">
-              <div class="form__group">
-                <label for="contact-name" class="form__label">Full Name <span style="color:var(--accent)">*</span></label>
-                <input
-                  type="text"
-                  id="contact-name"
-                  name="contact-name"
-                  class="form__input"
-                  placeholder="Your name"
-                  required
-                  autocomplete="name"
-                />
-              </div>
-              <div class="form__group">
-                <label for="contact-email" class="form__label">Email Address <span style="color:var(--accent)">*</span></label>
-                <input
-                  type="email"
-                  id="contact-email"
-                  name="contact-email"
-                  class="form__input"
-                  placeholder="your@email.com"
-                  required
-                  autocomplete="email"
-                />
-              </div>
+        <form class="contact__form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Full Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="contact-name" name="user_name" class="form-input" placeholder="Jane Smith" autocomplete="name" required />
             </div>
-
-            <div class="form__group">
-              <label for="contact-project" class="form__label">Enquiry Type <span style="color:var(--accent)">*</span></label>
-              <select id="contact-project" name="contact-project" class="form__select" required>
-                <option value="" disabled selected>Select a topic</option>
-                <option value="UK - Property Acquisition">Property Acquisition</option>
-                <option value="UK - Property Management">Property Management</option>
-                <option value="UK - Investment Enquiry">Investment Enquiry</option>
-                <option value="UK - Renovation">Renovation</option>
-                <option value="UK - Diaspora Support">Diaspora Property Support</option>
-                <option value="UK - General Enquiry">General Enquiry</option>
-              </select>
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email Address <span aria-hidden="true">*</span></label>
+              <input type="email" id="contact-email" name="user_email" class="form-input" placeholder="jane@example.com" autocomplete="email" required />
             </div>
+          </div>
 
-            <div class="form__group">
-              <label for="contact-textarea" class="form__label">Message</label>
-              <textarea
-                id="contact-textarea"
-                name="message"
-                class="form__textarea"
-                placeholder="Tell us more about your property needs..."
-                rows="5"
-              ></textarea>
-            </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-project">Service Area <span aria-hidden="true">*</span></label>
+            <select id="contact-project" name="user_subject" class="form-select" required>
+              <option value="" disabled selected>Select a service area</option>
+              <option value="IT Services (UK)">IT Services</option>
+              <option value="Real Estate (UK)">Real Estate</option>
+              <option value="Management Consultancy (UK)">Management Consultancy</option>
+              <option value="Business Support (UK)">Business Support</option>
+              <option value="General Enquiry (UK)">General Enquiry</option>
+            </select>
+          </div>
 
-            <button type="submit" class="form__submit">
-              <i class="fa-solid fa-paper-plane"></i>
-              <span class="btn-text">Send Message</span>
-            </button>
+          <div class="form-group">
+            <label class="form-label" for="contact-text">Message</label>
+            <textarea id="contact-text" name="user_message" class="form-textarea" placeholder="Tell us about your project or enquiry…" rows="5"></textarea>
+          </div>
 
-            <p id="contact-message" aria-live="polite"></p>
-
-          </form>
-        </div>
-
+          <button type="submit" class="form-submit">
+            <span class="btn-text">Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <p id="contact-message" aria-live="polite"></p>
+        </form>
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ========== FOOTER ========== -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__main">
-
         <div class="footer__brand">
-          <img src="assets/img/logo-dark.png" alt="Halite & Ember" class="footer__logo logo-for-dark" />
-          
-          <p class="footer__tagline">
-            "We are the salt of the earth and the light of the world. By preserving value and radiating light, we shape lasting legacies."
-          </p>
-          <div class="footer__socials" aria-label="Social media links">
-            <a href="#" class="footer__social" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" class="footer__social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="footer__social" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <img src="assets/img/logo-dark.png" alt="Halite &amp; Ember" class="footer__logo logo-dark" />
+          <img src="assets/img/logo-light.png" alt="Halite &amp; Ember" class="footer__logo logo-light" />
+          <p class="footer__tagline">We are the salt of the earth and the light of the world. By preserving value and radiating light, we shape lasting legacies.</p>
+          <div class="footer__socials">
+            <a href="https://www.linkedin.com/in/haliteandember" class="footer__social" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/haliteandember" class="footer__social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/haliteandember" class="footer__social" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
           </div>
         </div>
-
-        <div>
-          <h3 class="footer__col-title">Company</h3>
+        <div class="footer__col">
+          <div class="footer__col-title">UK Services</div>
           <ul class="footer__links" role="list">
-            <li><a href="index.html#about" class="footer__link">About Us</a></li>
-            <li><a href="index.html#values" class="footer__link">Our Values</a></li>
-            <li><a href="#uk-services" class="footer__link">UK Services</a></li>
-            <li><a href="#contact" class="footer__link">Contact</a></li>
+            <li><a href="#services" class="footer__link">IT Services</a></li>
+            <li><a href="#services" class="footer__link">Real Estate</a></li>
+            <li><a href="#services" class="footer__link">Management Consultancy</a></li>
+            <li><a href="#services" class="footer__link">Business Support</a></li>
           </ul>
         </div>
-
-        <div>
-          <h3 class="footer__col-title">Our Markets</h3>
+        <div class="footer__col">
+          <div class="footer__col-title">Navigate</div>
           <ul class="footer__links" role="list">
-            <li><a href="uk.html" class="footer__link">🇬🇧 United Kingdom</a></li>
-            <li><a href="nigeria.html" class="footer__link">🇳🇬 Nigeria</a></li>
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="nigeria.html" class="footer__link">Nigeria</a></li>
+            <li><a href="#contact" class="footer__link">Contact UK Team</a></li>
           </ul>
         </div>
-
       </div>
-
       <div class="footer__bottom">
-        <p class="footer__copyright">
-          &copy; <span id="year"></span> Halite &amp; Ember Ltd. Registered in England &amp; Wales. Company No. 16634355
-        </p>
-        <nav class="footer__bottom-links" aria-label="Legal links">
-          <a href="#" class="footer__bottom-link">Privacy Policy</a>
-          <a href="#" class="footer__bottom-link">Terms of Use</a>
-        </nav>
+        <span class="footer__copy">&copy; <span class="footer-year">2026</span> Halite &amp; Ember Ltd. Registered in England &amp; Wales.</span>
+        <div class="footer__legal">
+          <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer__legal-link">Terms of Use</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="assets/js/main.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
 </body>
 </html>

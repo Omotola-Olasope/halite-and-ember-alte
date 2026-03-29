@@ -3,27 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Halite & Ember — Creating spaces where people feel valued, cared for, and proud to belong. Trusted property partners operating with integrity and purpose." />
-  <meta property="og:title" content="Halite & Ember" />
-  <meta property="og:description" content="We put our customers at the heart of everything we do. Creating places people are proud to call home." />
+  <meta name="description" content="Halite &amp; Ember: A multi-disciplinary firm delivering IT services, real estate, management consultancy, and business support across the UK and Nigeria." />
+  <meta property="og:title" content="Halite &amp; Ember" />
+  <meta property="og:description" content="Preserving value. Radiating light. Building ventures, advising leaders, and shaping spaces across the UK and Nigeria." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://haliteandember.com/" />
+  <meta property="og:image" content="https://haliteandember.com/assets/img/logo-dark.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Halite &amp; Ember" />
+  <meta name="twitter:description" content="Preserving value. Radiating light. Building ventures, advising leaders, and shaping spaces across the UK and Nigeria." />
+  <meta name="twitter:image" content="https://haliteandember.com/assets/img/logo-dark.png" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://haliteandember.com/" />
   <title>Halite &amp; Ember</title>
 
-  <!-- Favicon -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Halite & Ember",
+    "url": "https://haliteandember.com",
+    "logo": "https://haliteandember.com/assets/img/logo-dark.png",
+    "description": "A multi-disciplinary professional firm delivering IT services, real estate, management consultancy, and business support across the UK and Nigeria.",
+    "email": "inquiries@haliteandember.com",
+    "areaServed": ["United Kingdom", "Nigeria"]
+  }
+  </script>
+
   <link rel="icon" href="assets/img/logo-dark.png" type="image/png" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/styles.css" />
 
-  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>emailjs.init('c47rwtY9rbzUAqD2t');</script>
 </head>
@@ -31,14 +46,15 @@
 
   <!-- ========== NAVIGATION ========== -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
-    <div class="nav__container">
+    <div class="nav__inner">
 
-      <a href="index.html" class="nav__logo" aria-label="Halite & Ember Home">
-        <img src="assets/img/logo-dark.png" alt="Halite & Ember" class="logo-for-dark" />
-        <img src="assets/img/logo-light.png" alt="Halite & Ember" class="logo-for-light" />
+      <a href="index.html" class="nav__logo" aria-label="Halite &amp; Ember Home">
+        <img src="assets/img/logo-dark.png" alt="Halite &amp; Ember" class="logo-dark" />
+        <img src="assets/img/logo-light.png" alt="Halite &amp; Ember" class="logo-light" />
       </a>
 
       <ul class="nav__links" role="list">
+        <li><a href="#services" class="nav__link" data-section="services">Services</a></li>
         <li><a href="#about" class="nav__link" data-section="about">About</a></li>
         <li><a href="#values" class="nav__link" data-section="values">Values</a></li>
         <li><a href="#operate" class="nav__link" data-section="operate">Where We Operate</a></li>
@@ -47,12 +63,12 @@
 
       <div class="nav__actions">
         <div class="nav__countries" aria-label="Select country">
-          <a href="uk.html" class="nav__country-btn" aria-label="View UK operations">🇬🇧 UK</a>
+          <a href="uk.html" class="nav__country" aria-label="View UK operations">UK</a>
           <span class="nav__country-sep">|</span>
-          <a href="nigeria.html" class="nav__country-btn" aria-label="View Nigeria operations">🇳🇬 Nigeria</a>
+          <a href="nigeria.html" class="nav__country" aria-label="View Nigeria operations">NG</a>
         </div>
 
-        <button class="nav__theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <button class="nav__theme" id="theme-toggle" aria-label="Toggle theme">
           <i class="fa-solid fa-sun icon-sun"></i>
           <i class="fa-solid fa-moon icon-moon"></i>
         </button>
@@ -65,311 +81,466 @@
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div class="nav__mobile" id="nav-mobile" role="navigation" aria-label="Mobile navigation">
+  <nav class="nav__mobile" id="nav-mobile" aria-label="Mobile navigation">
+    <a href="#services" class="nav__mobile-link">Services</a>
     <a href="#about" class="nav__mobile-link">About</a>
     <a href="#values" class="nav__mobile-link">Values</a>
     <a href="#operate" class="nav__mobile-link">Where We Operate</a>
     <a href="#contact" class="nav__mobile-link">Contact</a>
-    <div class="nav__mobile-countries">
-      <a href="uk.html" class="nav__mobile-link" style="border-bottom:none;padding:0.9rem 0;">🇬🇧 United Kingdom</a>
-      <a href="nigeria.html" class="nav__mobile-link" style="border-bottom:none;padding:0.9rem 0;">🇳🇬 Nigeria</a>
-    </div>
-  </div>
+    <a href="uk.html" class="nav__mobile-link">United Kingdom</a>
+    <a href="nigeria.html" class="nav__mobile-link">Nigeria</a>
+  </nav>
 
-  <!-- ========== HERO ========== -->
-  <section class="hero" id="hero" aria-label="Hero section">
-    <div class="hero__bg" aria-hidden="true">
-      <div class="hero__grid"></div>
-      <div class="hero__glow"></div>
-      <div class="hero__glow-2"></div>
-    </div>
+  <main id="main-content">
 
-    <div class="hero__content">
-      <div class="hero__eyebrow reveal">
-        <div class="hero__eyebrow-line"></div>
-        <span class="hero__eyebrow-text">Property with Purpose</span>
-      </div>
+  <!-- ========== HERO CAROUSEL ========== -->
+  <section class="carousel" aria-label="Hero carousel" aria-roledescription="carousel">
 
-      <h1 class="hero__headline reveal reveal-delay-1">
-        Where Spaces<br />Become <em>Sanctuaries</em>
-      </h1>
-
-      <p class="hero__body reveal reveal-delay-2">
-        We put our customers at the heart of everything we do, creating places where people feel valued, cared for, and proud to belong.
-      </p>
-
-      <div class="hero__actions reveal reveal-delay-3">
-        <a href="#about" class="btn btn--primary">
-          Discover Our Story <i class="fa-solid fa-arrow-down"></i>
-        </a>
-        <a href="#contact" class="btn btn--outline">
-          Get in Touch
-        </a>
-      </div>
-
-      <div class="hero__countries reveal reveal-delay-4" aria-label="Select your region">
-        <a href="uk.html" class="hero__country-card">
-          <div class="hero__country-flag" aria-hidden="true">🇬🇧</div>
-          <div class="hero__country-info">
-            <div class="hero__country-label">Our Operations</div>
-            <div class="hero__country-name">United Kingdom</div>
+    <!-- Slide 1: Brand -->
+    <div class="carousel__slide carousel__slide--active" data-slide="0" aria-roledescription="slide" aria-label="Slide 1 of 2">
+      <div class="carousel__orb" aria-hidden="true"></div>
+      <div class="carousel__slide-inner">
+        <div class="container">
+          <div class="cs1">
+            <img src="assets/img/logo-dark.png" class="cs1__logo logo-dark c-anim" alt="Halite &amp; Ember" />
+            <h1 class="cs1__headline c-anim">Preserving value<br><em>Radiating light</em></h1>
+            <p class="cs1__sub c-anim">A multi-disciplinary firm operating across the UK and Nigeria. IT services, real estate, management consultancy, and business support.</p>
+            <div class="cs1__actions c-anim">
+              <a href="#services" class="btn btn--solid">
+                <span class="btn-text">Our Services</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+            </div>
           </div>
-          <i class="fa-solid fa-arrow-right hero__country-arrow" aria-hidden="true"></i>
-        </a>
-        <a href="nigeria.html" class="hero__country-card">
-          <div class="hero__country-flag" aria-hidden="true">🇳🇬</div>
-          <div class="hero__country-info">
-            <div class="hero__country-label">Our Operations</div>
-            <div class="hero__country-name">Nigeria</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: PorchTalk -->
+    <div class="carousel__slide" data-slide="1" aria-roledescription="slide" aria-label="Slide 2 of 2">
+      <div class="carousel__slide-inner">
+        <div class="container">
+          <div class="cs2">
+            <div class="cs2__left">
+              <p class="cs2__label c-anim">New from Halite &amp; Ember</p>
+              <h2 class="cs2__headline c-anim">Introducing<br><em>PorchTalk.</em></h2>
+              <p class="cs2__sub c-anim">Anonymous advice for young Africans and the UK diaspora. Real conversations, across the questions that matter most.</p>
+              <div class="cs1__actions c-anim">
+                <a href="https://www.porchtalk.app" class="btn btn--ember" target="_blank" rel="noopener noreferrer">
+                  <span class="btn-text">Visit PorchTalk</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="#porchtalk" class="btn btn--ghost-ember">Learn More</a>
+              </div>
+            </div>
+
+            <div class="cs2__right c-anim" aria-hidden="true">
+              <div class="phone-mockup">
+                <div class="phone-frame">
+                  <div class="phone-notch"></div>
+                  <div class="phone-screen">
+                    <div class="pt-status">
+                      <span class="pt-time">9:41</span>
+                      <div class="pt-signal"><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="pt-header">
+                      <span class="pt-logo">Porch<span class="pt-logo-accent">Talk</span></span>
+                      <span class="pt-anon-pill">Anonymous</span>
+                    </div>
+                    <p class="pt-sub">Browse &middot; Sign in &middot; Share your story</p>
+                    <div class="pt-cats">
+                      <div class="pt-cat">
+                        <i class="fa-solid fa-heart pt-cat-icon"></i>
+                        <span class="pt-cat-name">Marriage</span>
+                      </div>
+                      <div class="pt-cat">
+                        <i class="fa-solid fa-coins pt-cat-icon"></i>
+                        <span class="pt-cat-name">Finance</span>
+                      </div>
+                      <div class="pt-cat">
+                        <i class="fa-solid fa-briefcase pt-cat-icon"></i>
+                        <span class="pt-cat-name">Career</span>
+                      </div>
+                      <div class="pt-cat">
+                        <i class="fa-solid fa-users pt-cat-icon"></i>
+                        <span class="pt-cat-name">Family</span>
+                      </div>
+                      <div class="pt-cat">
+                        <i class="fa-solid fa-plane pt-cat-icon"></i>
+                        <span class="pt-cat-name">Diaspora</span>
+                      </div>
+                      <div class="pt-cat">
+                        <i class="fa-solid fa-leaf pt-cat-icon"></i>
+                        <span class="pt-cat-name">Wellbeing</span>
+                      </div>
+                    </div>
+                    <hr class="pt-rule" />
+                    <div class="pt-post">
+                      <div class="pt-post-meta">
+                        <span class="pt-post-tag">Finance &amp; Money</span>
+                        <span class="pt-post-time">4h ago</span>
+                      </div>
+                      <p class="pt-post-text">"Moving back to Lagos next year. How do I manage savings between two countries without losing to exchange rates?"</p>
+                      <div class="pt-post-replies">
+                        <i class="fa-regular fa-comment"></i>
+                        <span>14 replies</span>
+                        <span style="margin-left:0.5rem; opacity:0.4">·</span>
+                        <i class="fa-regular fa-eye" style="margin-left:0.5rem"></i>
+                        <span>238 views</span>
+                      </div>
+                    </div>
+                    <div class="pt-compose">
+                      <div class="pt-compose-input">Share your story anonymously…</div>
+                      <div class="pt-send-btn"><i class="fa-solid fa-paper-plane"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <i class="fa-solid fa-arrow-right hero__country-arrow" aria-hidden="true"></i>
-        </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <div class="carousel__nav" aria-label="Carousel navigation">
+      <button class="carousel__arrow carousel__arrow--prev" aria-label="Previous slide">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="carousel__dots" role="tablist" aria-label="Carousel slides">
+        <button class="carousel__dot carousel__dot--active" role="tab" aria-selected="true" aria-label="Go to slide 1"></button>
+        <button class="carousel__dot" role="tab" aria-selected="false" aria-label="Go to slide 2"></button>
       </div>
 
-      <div class="hero__scroll reveal reveal-delay-5" aria-hidden="true">
-        <div class="hero__scroll-line"></div>
-        <span>Scroll to explore</span>
+      <div class="carousel__progress" aria-hidden="true">
+        <div class="carousel__progress-fill"></div>
+      </div>
+
+      <button class="carousel__arrow carousel__arrow--next" aria-label="Next slide">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="section services" id="services">
+    <div class="container">
+      <header class="services__header reveal">
+        <span class="label">What We Do</span>
+      </header>
+
+      <div class="services__list">
+        <div class="service-item reveal">
+          <span class="service-item__num">01</span>
+          <div class="service-item__body">
+            <h3 class="service-item__name">IT Services</h3>
+            <p class="service-item__desc">From infrastructure to bespoke software, we deliver technology solutions that enable organisations to operate with clarity and confidence. We build the digital backbone modern businesses rely on.</p>
+          </div>
+          <i class="fa-solid fa-arrow-right service-item__arrow"></i>
+        </div>
+
+        <div class="service-item reveal reveal-delay-1">
+          <span class="service-item__num">02</span>
+          <div class="service-item__body">
+            <h3 class="service-item__name">Real Estate</h3>
+            <p class="service-item__desc">We identify, develop, and manage properties that create genuine value for investors, occupiers, and communities. Purposeful property, handled with care.</p>
+          </div>
+          <i class="fa-solid fa-arrow-right service-item__arrow"></i>
+        </div>
+
+        <div class="service-item reveal reveal-delay-2">
+          <span class="service-item__num">03</span>
+          <div class="service-item__body">
+            <h3 class="service-item__name">Management Consultancy</h3>
+            <p class="service-item__desc">We work closely with leadership teams to sharpen strategy, improve operations, and unlock growth. Our advice is grounded in practice, not just theory.</p>
+          </div>
+          <i class="fa-solid fa-arrow-right service-item__arrow"></i>
+        </div>
+
+        <div class="service-item reveal reveal-delay-3">
+          <span class="service-item__num">04</span>
+          <div class="service-item__body">
+            <h3 class="service-item__name">Business Support</h3>
+            <p class="service-item__desc">We provide the operational scaffolding that allows businesses to focus on what they do best: administration, compliance, HR, and the invisible glue that holds organisations together.</p>
+          </div>
+          <i class="fa-solid fa-arrow-right service-item__arrow"></i>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== MARQUEE ========== -->
-  <div class="marquee-section" aria-hidden="true">
-    <div class="marquee-track">
-      <div class="marquee-item"><span class="marquee-dot"></span> Integrity</div>
-      <div class="marquee-item"><span class="marquee-dot"></span> Exceptional Service</div>
-      <div class="marquee-item"><span class="marquee-dot"></span> Careful Stewardship</div>
-      <div class="marquee-item"><span class="marquee-dot"></span> Community First</div>
-      <div class="marquee-item"><span class="marquee-dot"></span> Lasting Value</div>
-      <div class="marquee-item"><span class="marquee-dot"></span> Transformative Impact</div>
-      <div class="marquee-item"><span class="marquee-dot"></span> Integrity</div>
-      <div class="marquee-item"><span class="marquee-dot"></span> Exceptional Service</div>
-      <div class="marquee-item"><span class="marquee-dot"></span> Careful Stewardship</div>
-      <div class="marquee-item"><span class="marquee-dot"></span> Community First</div>
-      <div class="marquee-item"><span class="marquee-dot"></span> Lasting Value</div>
-      <div class="marquee-item"><span class="marquee-dot"></span> Transformative Impact</div>
+  <!-- ========== PORCHTALK SHOWCASE ========== -->
+  <section class="section porchtalk" id="porchtalk" aria-labelledby="porchtalk-heading">
+    <div class="container">
+      <div class="porchtalk__inner">
+
+        <div class="porchtalk__left">
+          <p class="porchtalk__product-label reveal">New from Halite &amp; Ember</p>
+          <h2 class="porchtalk__wordmark reveal reveal-delay-1" id="porchtalk-heading">PorchTalk</h2>
+          <p class="porchtalk__tagline reveal reveal-delay-2">Anonymous advice, human connection.</p>
+          <p class="porchtalk__desc reveal reveal-delay-2">
+            A safe, anonymous platform for young Africans and the UK diaspora to seek and share real advice on the questions that matter most. Vetted advisers, real conversations, across a growing range of life categories.
+          </p>
+
+          <div class="porchtalk__pillars reveal reveal-delay-3">
+            <div class="porchtalk__pillar">
+              <span class="porchtalk__pillar-dot"></span>
+              <span class="porchtalk__pillar-text">No account required. Fully anonymous.</span>
+            </div>
+            <div class="porchtalk__pillar">
+              <span class="porchtalk__pillar-dot"></span>
+              <span class="porchtalk__pillar-text">Vetted advisers across life categories</span>
+            </div>
+            <div class="porchtalk__pillar">
+              <span class="porchtalk__pillar-dot"></span>
+              <span class="porchtalk__pillar-text">Built for the African diaspora experience</span>
+            </div>
+          </div>
+
+          <div class="porchtalk__cta reveal reveal-delay-4">
+            <a href="https://www.porchtalk.app" class="btn btn--ember" target="_blank" rel="noopener noreferrer">
+              <span class="btn-text">Visit PorchTalk</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="#contact" class="btn btn--ghost-ember">Learn More</a>
+          </div>
+        </div>
+
+        <div class="porchtalk__right reveal reveal-delay-2" aria-hidden="true">
+          <div class="phone-mockup">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+
+                <div class="pt-status">
+                  <span class="pt-time">9:41</span>
+                  <div class="pt-signal">
+                    <span></span><span></span><span></span>
+                  </div>
+                </div>
+
+                <div class="pt-header">
+                  <span class="pt-logo">Porch<span class="pt-logo-accent">Talk</span></span>
+                  <span class="pt-anon-pill">Anonymous</span>
+                </div>
+
+                <p class="pt-sub">Browse &middot; Sign in &middot; Share your story</p>
+
+                <div class="pt-cats">
+                  <div class="pt-cat">
+                    <i class="fa-solid fa-heart pt-cat-icon"></i>
+                    <span class="pt-cat-name">Marriage</span>
+                  </div>
+                  <div class="pt-cat">
+                    <i class="fa-solid fa-coins pt-cat-icon"></i>
+                    <span class="pt-cat-name">Finance</span>
+                  </div>
+                  <div class="pt-cat">
+                    <i class="fa-solid fa-briefcase pt-cat-icon"></i>
+                    <span class="pt-cat-name">Career</span>
+                  </div>
+                  <div class="pt-cat">
+                    <i class="fa-solid fa-users pt-cat-icon"></i>
+                    <span class="pt-cat-name">Family</span>
+                  </div>
+                  <div class="pt-cat">
+                    <i class="fa-solid fa-plane pt-cat-icon"></i>
+                    <span class="pt-cat-name">Diaspora</span>
+                  </div>
+                  <div class="pt-cat">
+                    <i class="fa-solid fa-leaf pt-cat-icon"></i>
+                    <span class="pt-cat-name">Wellbeing</span>
+                  </div>
+                </div>
+
+                <hr class="pt-rule" />
+
+                <div class="pt-post">
+                  <div class="pt-post-meta">
+                    <span class="pt-post-tag">Finance &amp; Money</span>
+                    <span class="pt-post-time">4h ago</span>
+                  </div>
+                  <p class="pt-post-text">"Moving back to Lagos next year. How do I manage savings between two countries without losing to exchange rates?"</p>
+                  <div class="pt-post-replies">
+                    <i class="fa-regular fa-comment"></i>
+                    <span>14 replies</span>
+                    <span style="margin-left:0.5rem; opacity:0.4">·</span>
+                    <i class="fa-regular fa-eye" style="margin-left:0.5rem"></i>
+                    <span>238 views</span>
+                  </div>
+                </div>
+
+                <div class="pt-compose">
+                  <div class="pt-compose-input">Share your story anonymously…</div>
+                  <div class="pt-send-btn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- ========== ABOUT ========== -->
-  <section class="about section" id="about" aria-labelledby="about-title">
+  <section class="section about" id="about" aria-labelledby="about-heading">
     <div class="container">
-      <div class="about__grid">
+      <div class="about__inner">
 
-        <div class="about__visual reveal">
-          <div class="about__image-block">
-            <div class="about__image-block-inner">
-              <span class="about__monogram"><img src="assets/img/logo-dark.png" alt="Halite & Ember" class="logo-for-dark" /></span>
+        <div class="about__left">
+          <span class="label reveal">Who We Are</span>
+          <h2 class="display reveal reveal-delay-1" id="about-heading" style="font-size: clamp(2.2rem, 4.5vw, 3.4rem); margin: 0.5rem 0 0;">
+            The name says<br><em>everything.</em>
+          </h2>
+
+          <div class="about__name-split reveal reveal-delay-2">
+            <div class="about__name-part">
+              <div class="about__name-word">Halite</div>
+              <div class="about__name-meaning">Rock Salt</div>
+              <p class="about__name-desc">Enduring, essential, and formed under pressure. The mineral that preserves, connects, and sustains. A symbol of substance and permanence.</p>
             </div>
-          </div>
-          <div class="about__accent-box">
-            <span class="about__accent-number">2</span>
-            <span class="about__accent-label">Markets</span>
+            <div class="about__name-part">
+              <div class="about__name-word">Ember</div>
+              <div class="about__name-meaning">Glowing Fire</div>
+              <p class="about__name-desc">Warmth that persists long after the flame. The quiet energy that nurtures, illuminates, and transforms. A symbol of care and possibility.</p>
+            </div>
           </div>
         </div>
 
-        <div class="about__content">
-          <p class="section__label">Our Story</p>
-          <h2 class="section__title" id="about-title">Built on Trust.<br />Driven by Purpose.</h2>
-
+        <div class="about__right reveal reveal-delay-2">
           <blockquote class="about__quote">
-            "Every property we touch is more than a building, it is someone's home, someone's livelihood."
+            "We put our customers at the heart of everything we do, creating places and services people are proud to call their own."
           </blockquote>
-
           <p class="about__body">
-            Halite &amp; Ember was founded on the belief that property should be a source of pride, not stress. We combine deep market knowledge with an unwavering commitment to the people we serve, clients, tenants, and communities alike.
+            Halite &amp; Ember is a multi-disciplinary firm registered in the United Kingdom and Nigeria. We operate at the intersection of technology, property, and people, providing services that enable individuals, businesses, and communities to thrive.
+          </p>
+          <p class="about__body">
+            Whether we are deploying IT infrastructure, managing a property portfolio, advising a leadership team, or supporting a growing business, our commitment is the same: rigour, warmth, and integrity in everything we do.
           </p>
 
-          <p class="about__body">
-            Our name reflects our ethos: <br> <strong>Halite</strong> — rock salt, pure and enduring — represents our commitment to integrity and lasting foundations. <br><strong>Ember</strong> — the warm, persistent glow of fire — symbolises the warmth we bring to every relationship and the transformative energy that drives our work.
-          </p>
-
-          <div class="about__mission-box reveal">
+          <div class="about__mission">
             <div class="about__mission-label">Our Mission</div>
-            <p class="about__mission-text">
-              We put our customers at the heart of everything we do. From the spaces we create to the lives we support, Halite &amp; Ember is committed to creating places where people feel valued, cared for, and proud to belong.
-            </p>
+            <p class="about__mission-text">To build ventures and deliver services that create lasting value for clients, partners, and the communities we work in.</p>
           </div>
         </div>
 
       </div>
     </div>
   </section>
-
-  <div class="divider"></div>
-
-  <!-- ========== VISION ========== -->
-  <section class="vision section" id="vision" aria-labelledby="vision-title">
-    <div class="container">
-      <div class="vision__inner">
-
-        <div class="vision__content reveal">
-          <p class="section__label">Looking Forward</p>
-          <h2 class="section__title" id="vision-title">Setting the Standard,<br />Everywhere We Are</h2>
-          <p class="section__subtitle">
-            We aspire to be the property partner customers trust most, known not just for what we build, but for how we build it, and who we build it for.
-          </p>
-
-          <div class="vision__pillars" style="margin-top:2rem;">
-            <div class="vision__pillar reveal reveal-delay-1">
-              <div class="vision__pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
-              <span class="vision__pillar-text">Trusted Partner</span>
-            </div>
-            <div class="vision__pillar reveal reveal-delay-2">
-              <div class="vision__pillar-icon"><i class="fa-solid fa-house-chimney"></i></div>
-              <span class="vision__pillar-text">Feels Like Home</span>
-            </div>
-            <div class="vision__pillar reveal reveal-delay-3">
-              <div class="vision__pillar-icon"><i class="fa-solid fa-chart-line"></i></div>
-              <span class="vision__pillar-text">Lasting Value</span>
-            </div>
-            <div class="vision__pillar reveal reveal-delay-4">
-              <div class="vision__pillar-icon"><i class="fa-solid fa-people-group"></i></div>
-              <span class="vision__pillar-text">Community Impact</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="vision__visual reveal reveal-delay-2">
-          <div class="vision__card">
-            <div class="vision__card-quote" aria-hidden="true">"</div>
-            <p class="vision__card-text">
-              <br>To be the property partner customers trust most, known for creating and managing spaces that feel like home, deliver lasting value, and enhance everyday life. <br><br> We aim to set the standard for integrity, service, and quality in every community we touch.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
 
   <!-- ========== VALUES ========== -->
-  <section class="values section" id="values" aria-labelledby="values-title">
+  <section class="section values" id="values" aria-labelledby="values-heading">
     <div class="container">
-      <div class="values__header reveal">
-        <p class="section__label">What We Stand For</p>
-        <h2 class="section__title" id="values-title">The H.E.A.R.T. Framework</h2>
-        <p class="section__subtitle">
-          Five principles that guide every decision, every interaction, and every property we steward.
-        </p>
-      </div>
+      <header class="values__header reveal">
+        <span class="label">Our Values</span>
+        <h2 class="display reveal reveal-delay-1" id="values-heading" style="font-size: clamp(2.2rem, 4.5vw, 3.4rem); margin-top: 0.5rem;">
+          We lead with<br><em>H.E.A.R.T.</em>
+        </h2>
+      </header>
 
-      <div class="values__grid" role="list">
-
-        <article class="value-card reveal" role="listitem">
-          <div class="value-card__letter" aria-hidden="true">H</div>
-          <h3 class="value-card__title">Honesty &amp; Integrity</h3>
-          <p class="value-card__body">Our word is our bond. We conduct every piece of business with full transparency and moral clarity, no shortcuts, no exceptions.</p>
-        </article>
-
-        <article class="value-card reveal reveal-delay-1" role="listitem">
-          <div class="value-card__letter" aria-hidden="true">E</div>
-          <h3 class="value-card__title">Excellence in Execution</h3>
-          <p class="value-card__body">We sweat the details. Every transaction, renovation, and tenant experience must reflect our standard, because ordinary is not enough.</p>
-        </article>
-
-        <article class="value-card reveal reveal-delay-2" role="listitem">
-          <div class="value-card__letter" aria-hidden="true">A</div>
-          <h3 class="value-card__title">Accountability</h3>
-          <p class="value-card__body">We own our actions. We follow through on our commitments, especially when no one is watching. Accountability is not a rule; it is a habit.</p>
-        </article>
-
-        <article class="value-card reveal reveal-delay-3" role="listitem">
-          <div class="value-card__letter" aria-hidden="true">R</div>
-          <h3 class="value-card__title">Respect for People &amp; Property</h3>
-          <p class="value-card__body">We treat our clients, tenants, and assets with deep respect, honouring relationships and responsibilities with equal care and attention.</p>
-        </article>
-
-        <article class="value-card reveal reveal-delay-4" role="listitem">
-          <div class="value-card__letter" aria-hidden="true">T</div>
-          <h3 class="value-card__title">Transformative Impact</h3>
-          <p class="value-card__body">We aim to leave places and people better than we found them, always. Great property is not just shelter; it is the setting for a better life.</p>
-        </article>
-
+      <div class="values__grid">
+        <div class="value-block reveal">
+          <div class="value-block__letter">H</div>
+          <div class="value-block__title">Honesty &amp; Integrity</div>
+          <p class="value-block__body">Our word is our bond. We conduct every piece of business with full transparency and moral clarity, no shortcuts, no exceptions.</p>
+        </div>
+        <div class="value-block reveal reveal-delay-1">
+          <div class="value-block__letter">E</div>
+          <div class="value-block__title">Excellence in Execution</div>
+          <p class="value-block__body">We sweat the details. Every transaction, and customer experience must reflect our standard, because ordinary is not enough.</p>
+        </div>
+        <div class="value-block reveal reveal-delay-2">
+          <div class="value-block__letter">A</div>
+          <div class="value-block__title">Accountability</div>
+          <p class="value-block__body">We own our actions. We follow through on our commitments, especially when no one is watching. Accountability is not a rule; it is a habit.</p>
+        </div>
+        <div class="value-block reveal reveal-delay-3">
+          <div class="value-block__letter">R</div>
+          <div class="value-block__title">Respect for People &amp; Property</div>
+          <p class="value-block__body">We treat our clients, tenants, and assets with deep respect, honouring relationships and responsibilities with equal care and attention.</p>
+        </div>
+        <div class="value-block reveal reveal-delay-4">
+          <div class="value-block__letter">T</div>
+          <div class="value-block__title">Transformative Impact</div>
+          <p class="value-block__body">We aim to leave places and people better than we found them, always.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
   <!-- ========== WHERE WE OPERATE ========== -->
-  <section class="operate section" id="operate" aria-labelledby="operate-title">
+  <section class="section operate" id="operate" aria-labelledby="operate-heading">
     <div class="container">
-      <div class="operate__header reveal">
-        <p class="section__label">Our Presence</p>
-        <h2 class="section__title" id="operate-title">Where We Operate</h2>
-        <p class="section__subtitle">
-          Halite &amp; Ember is registered and operating in two dynamic markets. Select your country to learn more.
-        </p>
-      </div>
+      <header class="operate__header reveal">
+        <span class="label">Our Reach</span>
+        <h2 class="display reveal reveal-delay-1" id="operate-heading" style="font-size: clamp(2.2rem, 4.5vw, 3.4rem); margin-top: 0.5rem;">
+          Where We<br><em>Operate</em>
+        </h2>
+      </header>
 
       <div class="operate__grid">
-
-        <a href="uk.html" class="operate__card reveal reveal-delay-1" aria-label="Halite & Ember United Kingdom">
-          <div class="operate__card-header">
-            <div class="operate__card-flag" aria-hidden="true">🇬🇧</div>
-            <i class="fa-solid fa-arrow-right operate__card-arrow" aria-hidden="true"></i>
+        <a href="uk.html" class="operate__card reveal">
+          <div class="operate__card-top">
+            <i class="fa-solid fa-location-dot operate__card-icon"></i>
+            <i class="fa-solid fa-arrow-right operate__card-arrow"></i>
           </div>
           <div class="operate__card-body">
             <h3 class="operate__card-country">United Kingdom</h3>
-            <p class="operate__card-tagline">
-              Serving clients across the United Kingdom with a commitment to fair dealing, quality standards, and transparent property stewardship in one of the world's most established property markets.
-            </p>
-            <span class="btn btn--ghost">Explore UK Operations <i class="fa-solid fa-arrow-right"></i></span>
+            <p class="operate__card-desc">Registered and operating in the UK, we serve clients across England and Wales. Our UK entity focuses on real estate, IT services, consultancy, and business support for British and diaspora-connected organisations.</p>
           </div>
-          <div class="operate__card-footer">
+          <div class="operate__card-foot">
             <span class="operate__card-entity">Halite &amp; Ember Ltd</span>
             <span class="operate__card-status">
-              <span class="operate__card-status-dot"></span>
-              Registered
+              <span class="status-dot"></span>
+              Active
             </span>
           </div>
         </a>
 
-        <a href="nigeria.html" class="operate__card reveal reveal-delay-2" aria-label="Halite & Ember Nigeria">
-          <div class="operate__card-header">
-            <div class="operate__card-flag" aria-hidden="true">🇳🇬</div>
-            <i class="fa-solid fa-arrow-right operate__card-arrow" aria-hidden="true"></i>
+        <a href="nigeria.html" class="operate__card reveal reveal-delay-1">
+          <div class="operate__card-top">
+            <i class="fa-solid fa-location-dot operate__card-icon"></i>
+            <i class="fa-solid fa-arrow-right operate__card-arrow"></i>
           </div>
           <div class="operate__card-body">
             <h3 class="operate__card-country">Nigeria</h3>
-            <p class="operate__card-tagline">
-              Positioned in Africa's most dynamic economy, bringing the same dedication to integrity and quality to a rapidly growing property landscape with outstanding long-term potential.
-            </p>
-            <span class="btn btn--ghost">Explore Nigeria Operations <i class="fa-solid fa-arrow-right"></i></span>
+            <p class="operate__card-desc">With a strong presence across major Nigerian cities, we deliver real estate, technology, and management services in one of Africa's most dynamic economies. Deep roots, wide reach.</p>
           </div>
-          <div class="operate__card-footer">
+          <div class="operate__card-foot">
             <span class="operate__card-entity">Halite &amp; Ember Nigeria Ltd</span>
             <span class="operate__card-status">
-              <span class="operate__card-status-dot"></span>
-              Registered
+              <span class="status-dot"></span>
+              Active
             </span>
           </div>
         </a>
-
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
   <!-- ========== CONTACT ========== -->
-  <section class="contact section" id="contact" aria-labelledby="contact-title">
+  <section class="section contact" id="contact" aria-labelledby="contact-heading">
     <div class="container">
       <div class="contact__grid">
 
-        <div class="contact__info reveal">
-          <p class="section__label">Get in Touch</p>
-          <h2 class="contact__info-title" id="contact-title">Let's Start a Conversation</h2>
-          <p class="contact__info-body">
-            Whether you have a question, a proposal, or simply want to know more about Halite &amp; Ember, we would love to hear from you.
+        <div class="contact__info">
+          <span class="label reveal">Get in Touch</span>
+          <h2 class="contact__info-title reveal reveal-delay-1" id="contact-heading">
+            Let's build<br><em>something</em><br>together.
+          </h2>
+          <p class="contact__info-body reveal reveal-delay-2">
+            Whether you have a project in mind, a business challenge to solve, or simply want to explore what's possible, we would love to hear from you.
           </p>
 
-          <div class="contact__detail">
-            <div class="contact__detail-icon" aria-hidden="true">
+          <div class="contact__detail reveal reveal-delay-3">
+            <div class="contact__detail-icon">
               <i class="fa-solid fa-envelope"></i>
             </div>
             <div>
@@ -378,94 +549,59 @@
             </div>
           </div>
 
-          <div class="contact__detail">
-            <div class="contact__detail-icon" aria-hidden="true">
-              <i class="fa-solid fa-globe"></i>
+          <div class="contact__detail reveal reveal-delay-4">
+            <div class="contact__detail-icon">
+              <i class="fa-solid fa-location-dot"></i>
             </div>
             <div>
-              <div class="contact__detail-label">Operations</div>
+              <div class="contact__detail-label">Offices</div>
               <div class="contact__detail-value">United Kingdom &amp; Nigeria</div>
             </div>
           </div>
+        </div>
 
-          <div class="contact__detail">
-            <div class="contact__detail-icon" aria-hidden="true">
-              <i class="fa-solid fa-clock"></i>
+        <form class="contact__form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Full Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="contact-name" name="user_name" class="form-input" placeholder="Jane Smith" autocomplete="name" required />
             </div>
-            <div>
-              <div class="contact__detail-label">Response Time</div>
-              <div class="contact__detail-value">Within 2 business days</div>
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email Address <span aria-hidden="true">*</span></label>
+              <input type="email" id="contact-email" name="user_email" class="form-input" placeholder="jane@example.com" autocomplete="email" required />
             </div>
           </div>
-        </div>
 
-        <div class="contact__form-wrap reveal reveal-delay-2">
-          <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="contact-project">How Can We Help? <span aria-hidden="true">*</span></label>
+            <select id="contact-project" name="user_subject" class="form-select" required>
+              <option value="" disabled selected>Select a service area</option>
+              <option value="IT Services">IT Services</option>
+              <option value="Real Estate">Real Estate</option>
+              <option value="Management Consultancy">Management Consultancy</option>
+              <option value="Business Support">Business Support</option>
+              <option value="PorchTalk">PorchTalk</option>
+              <option value="General Enquiry">General Enquiry</option>
+            </select>
+          </div>
 
-            <div class="form__row">
-              <div class="form__group">
-                <label for="contact-name" class="form__label">Full Name <span style="color:var(--accent)">*</span></label>
-                <input
-                  type="text"
-                  id="contact-name"
-                  name="contact-name"
-                  class="form__input"
-                  placeholder="Your name"
-                  required
-                  autocomplete="name"
-                />
-              </div>
-              <div class="form__group">
-                <label for="contact-email" class="form__label">Email Address <span style="color:var(--accent)">*</span></label>
-                <input
-                  type="email"
-                  id="contact-email"
-                  name="contact-email"
-                  class="form__input"
-                  placeholder="your@email.com"
-                  required
-                  autocomplete="email"
-                />
-              </div>
-            </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-text">Message</label>
+            <textarea id="contact-text" name="user_message" class="form-textarea" placeholder="Tell us about your project or enquiry…" rows="5"></textarea>
+          </div>
 
-            <div class="form__group">
-              <label for="contact-project" class="form__label">Subject / Enquiry Type <span style="color:var(--accent)">*</span></label>
-              <select id="contact-project" name="contact-project" class="form__select" required>
-                <option value="" disabled selected>Select a topic</option>
-                <option value="General Enquiry">General Enquiry</option>
-                <option value="UK Operations">UK Operations</option>
-                <option value="Nigeria Operations">Nigeria Operations</option>
-                <option value="Partnership Opportunity">Partnership Opportunity</option>
-                <option value="Investment Enquiry">Investment Enquiry</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-
-            <div class="form__group">
-              <label for="contact-textarea" class="form__label">Message</label>
-              <textarea
-                id="contact-textarea"
-                name="message"
-                class="form__textarea"
-                placeholder="Tell us more about your enquiry..."
-                rows="5"
-              ></textarea>
-            </div>
-
-            <button type="submit" class="form__submit">
-              <i class="fa-solid fa-paper-plane"></i>
-              <span class="btn-text">Send Message</span>
-            </button>
-
-            <p id="contact-message" aria-live="polite"></p>
-
-          </form>
-        </div>
+          <button type="submit" class="form-submit">
+            <span class="btn-text">Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <p id="contact-message" aria-live="polite"></p>
+        </form>
 
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ========== FOOTER ========== -->
   <footer class="footer" role="contentinfo">
@@ -473,59 +609,51 @@
       <div class="footer__main">
 
         <div class="footer__brand">
-          <img src="assets/img/logo-dark.png" alt="Halite & Ember" class="footer__logo logo-for-dark" />
-          
-          <p class="footer__tagline">
-            "We are the salt of the earth and the light of the world. By preserving value and radiating light, we shape lasting legacies."
-          </p>
-          <div class="footer__socials" aria-label="Social media links">
-            <a href="https://www.linkedin.com/in/haliteandember" target="_blank" class="footer__social" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="https://instagram.com/haliteandember" target="_blank" class="footer__social" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://twitter.com/haliteandember" target="_blank" class="footer__social" aria-label="X / Twitter">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
+          <img src="assets/img/logo-dark.png" alt="Halite &amp; Ember" class="footer__logo logo-dark" />
+          <img src="assets/img/logo-light.png" alt="Halite &amp; Ember" class="footer__logo logo-light" />
+          <p class="footer__tagline">We are the salt of the earth and the light of the world. By preserving value and radiating light, we shape lasting legacies.</p>
+          <div class="footer__socials">
+            <a href="https://www.linkedin.com/in/haliteandember" class="footer__social" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/haliteandember" class="footer__social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/haliteandember" class="footer__social" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
           </div>
         </div>
 
-        <div>
-          <h3 class="footer__col-title">Company</h3>
+        <div class="footer__col">
+          <div class="footer__col-title">Services</div>
           <ul class="footer__links" role="list">
-            <li><a href="#about" class="footer__link">About Us</a></li>
-            <li><a href="#values" class="footer__link">Our Values</a></li>
-            <li><a href="#operate" class="footer__link">Where We Operate</a></li>
-            <li><a href="#contact" class="footer__link">Contact</a></li>
+            <li><a href="#services" class="footer__link">IT Services</a></li>
+            <li><a href="#services" class="footer__link">Real Estate</a></li>
+            <li><a href="#services" class="footer__link">Management Consultancy</a></li>
+            <li><a href="#services" class="footer__link">Business Support</a></li>
+            <li><a href="#porchtalk" class="footer__link">PorchTalk</a></li>
           </ul>
         </div>
 
-        <div>
-          <h3 class="footer__col-title">Our Markets</h3>
+        <div class="footer__col">
+          <div class="footer__col-title">Company</div>
           <ul class="footer__links" role="list">
-            <li><a href="uk.html" class="footer__link">🇬🇧 United Kingdom</a></li>
-            <li><a href="nigeria.html" class="footer__link">🇳🇬 Nigeria</a></li>
+            <li><a href="#about" class="footer__link">About Us</a></li>
+            <li><a href="#values" class="footer__link">Our Values</a></li>
+            <li><a href="uk.html" class="footer__link">United Kingdom</a></li>
+            <li><a href="nigeria.html" class="footer__link">Nigeria</a></li>
+            <li><a href="#contact" class="footer__link">Contact</a></li>
           </ul>
         </div>
 
       </div>
 
       <div class="footer__bottom">
-        <p class="footer__copyright">
-          &copy; <span id="year"></span> Halite &amp; Ember. All rights reserved.
-        </p>
-        <nav class="footer__bottom-links" aria-label="Legal links">
-          <a href="#" class="footer__bottom-link">Privacy Policy</a>
-          <a href="#" class="footer__bottom-link">Terms of Use</a>
-        </nav>
+        <span class="footer__copy">&copy; <span class="footer-year">2026</span> Halite &amp; Ember Ltd. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer__legal-link">Terms of Use</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="assets/js/main.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 </body>
 </html>

@@ -3,26 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Halite & Ember in Nigeria — Delivering trusted property services with integrity, quality, and care across Africa's most dynamic economy." />
-  <meta property="og:title" content="Halite & Ember — Nigeria" />
-  <meta property="og:description" content="Trusted property partnership in Africa's largest and most dynamic real estate market." />
-  <title>Halite &amp; Ember Nigeria Ltd</title>
+  <meta name="description" content="Halite &amp; Ember in Nigeria: IT services, real estate, management consultancy, and business support across major Nigerian cities." />
+  <meta property="og:title" content="Halite &amp; Ember, Nigeria" />
+  <meta property="og:description" content="Halite &amp; Ember in Nigeria: IT services, real estate, management consultancy, and business support across major Nigerian cities." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://haliteandember.com/nigeria.html" />
+  <meta property="og:image" content="https://haliteandember.com/assets/img/logo-dark.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Halite &amp; Ember, Nigeria" />
+  <meta name="twitter:description" content="Halite &amp; Ember in Nigeria: IT services, real estate, management consultancy, and business support across major Nigerian cities." />
+  <meta name="twitter:image" content="https://haliteandember.com/assets/img/logo-dark.png" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://haliteandember.com/nigeria.html" />
+  <title>Halite &amp; Ember Nigeria</title>
 
-  <!-- Favicon -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Halite & Ember Nigeria",
+    "url": "https://haliteandember.com/nigeria.html",
+    "logo": "https://haliteandember.com/assets/img/logo-dark.png",
+    "description": "A multi-disciplinary professional firm delivering IT services, real estate, management consultancy, and business support across major Nigerian cities.",
+    "email": "inquiries@haliteandember.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "NG"
+    },
+    "areaServed": "Nigeria"
+  }
+  </script>
+
   <link rel="icon" href="assets/img/logo-dark.png" type="image/png" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/styles.css" />
 
-  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>emailjs.init('c47rwtY9rbzUAqD2t');</script>
 </head>
@@ -30,446 +50,295 @@
 
   <!-- ========== NAVIGATION ========== -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
-    <div class="nav__container">
-
-      <a href="index.html" class="nav__logo" aria-label="Halite & Ember Home">
-        <img src="assets/img/logo-dark.png" alt="Halite & Ember" class="logo-for-dark" />
-        <img src="assets/img/logo-light.png" alt="Halite & Ember" class="logo-for-light" />
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Halite &amp; Ember Home">
+        <img src="assets/img/logo-dark.png" alt="Halite &amp; Ember" class="logo-dark" />
+        <img src="assets/img/logo-light.png" alt="Halite &amp; Ember" class="logo-light" />
       </a>
 
       <ul class="nav__links" role="list">
-        <li><a href="index.html#about" class="nav__link">About</a></li>
-        <li><a href="index.html#values" class="nav__link">Values</a></li>
-        <li><a href="#ng-services" class="nav__link" data-section="ng-services">Services</a></li>
+        <li><a href="#overview" class="nav__link" data-section="overview">Overview</a></li>
+        <li><a href="#services" class="nav__link" data-section="services">Services</a></li>
+        <li><a href="#why" class="nav__link" data-section="why">Why Nigeria</a></li>
         <li><a href="#contact" class="nav__link" data-section="contact">Contact</a></li>
       </ul>
 
       <div class="nav__actions">
         <div class="nav__countries" aria-label="Select country">
-          <a href="uk.html" class="nav__country-btn">🇬🇧 UK</a>
+          <a href="uk.html" class="nav__country">UK</a>
           <span class="nav__country-sep">|</span>
-          <a href="nigeria.html" class="nav__country-btn active" aria-current="page">🇳🇬 Nigeria</a>
+          <a href="nigeria.html" class="nav__country" aria-current="page" style="color: var(--accent);">NG</a>
         </div>
-
-        <button class="nav__theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <button class="nav__theme" id="theme-toggle" aria-label="Toggle theme">
           <i class="fa-solid fa-sun icon-sun"></i>
           <i class="fa-solid fa-moon icon-moon"></i>
         </button>
-
         <button class="nav__hamburger" id="nav-hamburger" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
       </div>
-
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div class="nav__mobile" id="nav-mobile" role="navigation" aria-label="Mobile navigation">
-    <a href="index.html#about" class="nav__mobile-link">About</a>
-    <a href="index.html#values" class="nav__mobile-link">Values</a>
-    <a href="#ng-services" class="nav__mobile-link">Services</a>
+  <nav class="nav__mobile" id="nav-mobile" aria-label="Mobile navigation">
+    <a href="#overview" class="nav__mobile-link">Overview</a>
+    <a href="#services" class="nav__mobile-link">Services</a>
+    <a href="#why" class="nav__mobile-link">Why Nigeria</a>
     <a href="#contact" class="nav__mobile-link">Contact</a>
-    <div class="nav__mobile-countries">
-      <a href="uk.html" class="nav__mobile-link" style="border-bottom:none;padding:0.9rem 0;">🇬🇧 United Kingdom</a>
-      <a href="nigeria.html" class="nav__mobile-link" style="border-bottom:none;padding:0.9rem 0;">🇳🇬 Nigeria</a>
-    </div>
-  </div>
+    <a href="index.html" class="nav__mobile-link">&#8592; Back to Home</a>
+    <a href="uk.html" class="nav__mobile-link">United Kingdom</a>
+  </nav>
+
+  <main id="main-content">
 
   <!-- ========== HERO ========== -->
-  <section class="country-hero" aria-label="Nigeria operations">
-    <div class="country-hero__bg" aria-hidden="true">
-      <div class="country-hero__grid"></div>
-      <div class="country-hero__glow"></div>
-    </div>
-
-    <div class="country-hero__content">
-      <nav class="country-hero__breadcrumb reveal" aria-label="Breadcrumb">
-        <a href="index.html">Home</a>
-        <i class="fa-solid fa-chevron-right"></i>
-        <span>Nigeria</span>
-      </nav>
-
-      <!-- <div class="country-hero__flag reveal" aria-hidden="true">🇳🇬</div> -->
-
-      <h1 class="country-hero__title reveal reveal-delay-1">
-        Halite &amp; Ember Ltd<br /><em>Nigeria</em>
-      </h1>
-
-      <p class="country-hero__body reveal reveal-delay-2">
-        Rooted in Africa's most dynamic economy, bringing the same dedication to integrity, quality, and genuine care to Nigeria's growing and vibrant property landscape.
-      </p>
+  <section class="country-hero" aria-label="Nigeria hero">
+    <div class="country-hero__orb" aria-hidden="true"></div>
+    <div class="container">
+      <div class="country-hero__content">
+        <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Nigeria</span>
+        </nav>
+        <div class="country-hero__icon reveal reveal-delay-1" aria-hidden="true">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <h1 class="country-hero__title reveal reveal-delay-2">
+          Halite &amp; Ember<br><em>Nigeria</em>
+        </h1>
+        <p class="country-hero__body reveal reveal-delay-3">
+          With deep roots across major Nigerian cities, we deliver real estate, technology, and management services in one of Africa's most dynamic economies. We are here. We are building.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- ========== OVERVIEW ========== -->
-  <section class="country-overview section" id="ng-overview" aria-labelledby="ng-overview-title">
+  <section class="section country-overview" id="overview">
     <div class="container">
-
-      <div class="coming-soon-banner reveal">
-        <i class="fa-solid fa-circle-info"></i>
-        <span>We are currently in pre-launch phase. <strong>Full Nigeria services launching soon.</strong> Register your interest or reach out to discuss how we can serve you.</span>
-      </div>
-
       <div class="country-overview__grid">
+        <div>
+          <span class="label reveal">Nigeria Operations</span>
+          <h2 class="display reveal reveal-delay-1" style="font-size: clamp(2rem, 4vw, 3rem); margin: 0.5rem 0 1.25rem;">
+            Deep roots,<br><em>wide reach.</em>
+          </h2>
+          <p class="about__body reveal reveal-delay-2">
+            Nigeria is not a market we entered lightly. It is home. Our Nigerian operations are built on genuine relationships, local knowledge, and a conviction that the country's best years are ahead. We serve individuals, businesses, and institutions that are building for the long term.
+          </p>
+          <p class="about__body reveal reveal-delay-3">
+            From Lagos to Abuja and beyond, we combine the professionalism of an international firm with the warmth and accessibility of a local partner.
+          </p>
 
-        <div class="reveal">
-          <p class="section__label">Nigerian Market</p>
-          <h2 class="section__title" id="ng-overview-title">Property with Purpose<br />in Nigeria</h2>
-          <p class="section__subtitle" style="margin-bottom:1.5rem;">
-            Nigeria is Africa's largest economy and home to one of the continent's most energetic and fast-growing real estate markets, driven by urbanisation, a young population, and rising aspirations.
-          </p>
-          <p class="about__body" style="color:var(--text-secondary);line-height:1.85;">
-            Halite &amp; Ember Nigeria Ltd is registered and positioned to serve clients across this dynamic landscape. We understand the Nigerian market's nuances, from Lagos to Abuja and beyond, and we are committed to bringing a new standard of trust and professionalism to property in Nigeria.
-          </p>
-          <p class="about__body" style="color:var(--text-secondary);line-height:1.85;margin-top:1rem;">
-            Whether you are a local investor, a homebuyer, a landlord, or a member of the diaspora looking to invest at home, Halite &amp; Ember Nigeria is being built with you in mind.
-          </p>
         </div>
 
         <div class="reveal reveal-delay-2">
-          <div class="country-stats">
-            <div class="stat-box">
-              <div class="stat-box__value">N2.4T+</div>
-              <div class="stat-box__label">Nigeria Real Estate Value</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-box__value">#1</div>
-              <div class="stat-box__label">Africa's Largest Economy</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-box__value">220M+</div>
-              <div class="stat-box__label">Population &amp; Growing</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-box__value">Halite &amp; Ember Nigeria Ltd</div>
-              <div class="stat-box__label">Registered Entity</div>
+          <div class="about__mission" style="margin-top: 0;">
+            <div class="about__mission-label">Nigeria Entity</div>
+            <p class="about__mission-text">Halite &amp; Ember Nigeria, operating across Lagos, Abuja, and key growth corridors. Our Nigerian team brings local expertise with international standards.</p>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <div class="about__mission">
+              <div class="about__mission-label">Our Commitment</div>
+              <p class="about__mission-text">We believe in Nigeria's potential. Every engagement we take on here is an investment in the future of the country: its people, its businesses, and its communities.</p>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
-
-  <div class="divider"></div>
 
   <!-- ========== SERVICES ========== -->
-  <section class="country-services section" id="ng-services" aria-labelledby="ng-services-title">
+  <section class="section country-services" id="services">
     <div class="container">
-      <div class="reveal">
-        <p class="section__label">What We Offer</p>
-        <h2 class="section__title" id="ng-services-title">Services in Nigeria</h2>
-        <p class="section__subtitle">
-          Our Nigeria service offering addresses the real needs of a dynamic market, combining local insight with the highest standards of integrity and client care.
-        </p>
-      </div>
+      <span class="label reveal">What We Offer</span>
+      <h2 class="display reveal reveal-delay-1" style="font-size: clamp(2rem, 4vw, 3rem); margin: 0.5rem 0 0;">
+        Services across<br><em>Nigeria</em>
+      </h2>
 
-      <div class="services__grid">
+      <div class="services-grid">
+        <div class="svc-card reveal">
+          <div class="svc-card__icon"><i class="fa-solid fa-microchip"></i></div>
+          <div class="svc-card__title">IT Services</div>
+          <p class="svc-card__body">Technology infrastructure, software solutions, and digital transformation for Nigerian businesses ready to modernise and scale with confidence.</p>
+        </div>
 
-        <article class="service-card reveal reveal-delay-1">
-          <div class="service-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-magnifying-glass-dollar"></i>
-          </div>
-          <h3 class="service-card__title">Property Acquisition</h3>
-          <p class="service-card__body">
-            Expert guidance on identifying, evaluating, and acquiring residential and commercial properties across Nigeria, helping clients invest with confidence and clarity in a complex market.
-          </p>
-          <span class="service-card__badge">Coming Soon</span>
-        </article>
+        <div class="svc-card reveal reveal-delay-1">
+          <div class="svc-card__icon"><i class="fa-solid fa-building"></i></div>
+          <div class="svc-card__title">Real Estate</div>
+          <p class="svc-card__body">Residential and commercial property acquisition, development management, and consultancy across Lagos, Abuja, and emerging Nigerian markets.</p>
+        </div>
 
-        <article class="service-card reveal reveal-delay-2">
-          <div class="service-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-house-chimney-user"></i>
-          </div>
-          <h3 class="service-card__title">Property Management</h3>
-          <p class="service-card__body">
-            Professional, full-service management for landlords and property owners across Nigeria, including tenant relations, maintenance, rent collection, and asset care.
-          </p>
-          <span class="service-card__badge">Coming Soon</span>
-        </article>
+        <div class="svc-card reveal reveal-delay-2">
+          <div class="svc-card__icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="svc-card__title">Management Consultancy</div>
+          <p class="svc-card__body">Strategic and operational advisory for Nigerian organisations navigating growth, restructuring, or entry into new markets, both domestic and international.</p>
+        </div>
 
-        <article class="service-card reveal reveal-delay-3">
-          <div class="service-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-hammer"></i>
-          </div>
-          <h3 class="service-card__title">Property Development Support</h3>
-          <p class="service-card__body">
-            Supporting developers and investors through the development process, from site assessment and procurement to quality oversight, ensuring outcomes that stand the test of time.
-          </p>
-          <span class="service-card__badge">Coming Soon</span>
-        </article>
-
-        <article class="service-card reveal reveal-delay-1">
-          <div class="service-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-plane-arrival"></i>
-          </div>
-          <h3 class="service-card__title">Diaspora Investment Support</h3>
-          <p class="service-card__body">
-            For Nigerians in the UK and globally looking to invest at home, trusted, transparent representation and hands-on management so you can invest with confidence from anywhere in the world.
-          </p>
-          <span class="service-card__badge">Coming Soon</span>
-        </article>
-
-        <article class="service-card reveal reveal-delay-2">
-          <div class="service-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-shield-halved"></i>
-          </div>
-          <h3 class="service-card__title">Due Diligence &amp; Verification</h3>
-          <p class="service-card__body">
-            Rigorous title verification, land use checks, and property assessments, providing buyers and investors with the clarity and protection they need in a market where trust is paramount.
-          </p>
-          <span class="service-card__badge">Coming Soon</span>
-        </article>
-
-        <article class="service-card reveal reveal-delay-3">
-          <div class="service-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-chart-line"></i>
-          </div>
-          <h3 class="service-card__title">Property Advisory</h3>
-          <p class="service-card__body">
-            Strategic market insights, portfolio advice, and investment guidance tailored to the Nigerian real estate landscape, from first-time buyers to seasoned investors.
-          </p>
-          <span class="service-card__badge">Coming Soon</span>
-        </article>
-
+        <div class="svc-card reveal reveal-delay-3">
+          <div class="svc-card__icon"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="svc-card__title">Business Support</div>
+          <p class="svc-card__body">Administrative, compliance, and operational support tailored to the Nigerian business environment. Reliable scaffolding so you can focus on building.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
-  <!-- ========== WHY ========== -->
-  <section class="country-why section" id="ng-why" aria-labelledby="ng-why-title">
+  <!-- ========== WHY NIGERIA ========== -->
+  <section class="section country-why" id="why">
     <div class="container">
       <div class="why__grid">
-
-        <div class="reveal">
-          <p class="section__label">Our Advantage</p>
-          <h2 class="section__title" id="ng-why-title">Why Halite &amp; Ember<br />in Nigeria</h2>
+        <div>
+          <span class="label reveal">Our Commitment</span>
+          <h2 class="display reveal reveal-delay-1" style="font-size: clamp(2rem, 4vw, 3rem); margin: 0.5rem 0 2rem;">
+            Why work with us<br>in <em>Nigeria</em>?
+          </h2>
 
           <div class="why__list">
-            <div class="why__item reveal reveal-delay-1">
-              <div class="why__item-number">01</div>
-              <div class="why__item-body">
-                <h3 class="why__item-title">A New Standard of Trust</h3>
-                <p class="why__item-text">In a market where trust is everything, we bring a culture of transparency, accountability, and honest dealing that clients can rely on, from first contact to final handover.</p>
-              </div>
-            </div>
-
             <div class="why__item reveal reveal-delay-2">
-              <div class="why__item-number">02</div>
-              <div class="why__item-body">
-                <h3 class="why__item-title">Built for Nigeria's Reality</h3>
-                <p class="why__item-text">We understand the Nigerian property market's complexities, from documentation and title issues to location dynamics, and we help our clients navigate them with confidence.</p>
+              <span class="why__item-num">01</span>
+              <div>
+                <div class="why__item-title">Local Knowledge</div>
+                <p class="why__item-text">We are not a foreign firm parachuting in. Nigeria is home, and our understanding of its markets, culture, and dynamics is genuine and hard-won.</p>
               </div>
             </div>
-
             <div class="why__item reveal reveal-delay-3">
-              <div class="why__item-number">03</div>
-              <div class="why__item-body">
-                <h3 class="why__item-title">Diaspora-Ready by Design</h3>
-                <p class="why__item-text">With our UK presence, we uniquely bridge the gap for diaspora investors, offering trusted local representation for clients making property decisions from abroad.</p>
+              <span class="why__item-num">02</span>
+              <div>
+                <div class="why__item-title">International Standards</div>
+                <p class="why__item-text">Our UK registration and dual-market experience means we bring international-grade professionalism and governance to every Nigerian engagement.</p>
               </div>
             </div>
-
             <div class="why__item reveal reveal-delay-4">
-              <div class="why__item-number">04</div>
-              <div class="why__item-body">
-                <h3 class="why__item-title">Long-Term, Not Transactional</h3>
-                <p class="why__item-text">We are building a business and a reputation for the long run. Our clients are not one-time transactions; they are partners in a relationship we intend to last.</p>
+              <span class="why__item-num">03</span>
+              <div>
+                <div class="why__item-title">Long-Term Thinking</div>
+                <p class="why__item-text">We are not here for quick wins. We build relationships and deliver work we would be proud to stand behind years from now.</p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="why__visual reveal reveal-delay-2">
-          <div class="why__visual-monogram"><img src="assets/img/logo-dark.png" alt="Halite & Ember" class="logo-for-dark" /></div>
-          <p class="why__visual-text">
-            "Nigeria deserves a property company that operates with the same standards expected anywhere in the world, and we are here to deliver exactly that."
-          </p>
+          <div class="why__visual-mono"><img src="./assets/img/logo-dark.png" alt=""></div>
+          <p class="why__visual-quote">"Nigeria is not just a market. It is the heartbeat of everything we do."</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
   <!-- ========== CONTACT ========== -->
-  <section class="contact section" id="contact" aria-labelledby="ng-contact-title">
+  <section class="section contact" id="contact" aria-labelledby="contact-heading-ng">
     <div class="container">
       <div class="contact__grid">
-
-        <div class="contact__info reveal">
-          <p class="section__label">Nigeria</p>
-          <h2 class="contact__info-title" id="ng-contact-title">Reach Our Nigeria Team</h2>
-          <p class="contact__info-body">
-            Have a Nigerian property enquiry? From Lagos to Abuja and beyond, we want to hear from you. Let's explore how Halite &amp; Ember Nigeria can serve your needs.
+        <div class="contact__info">
+          <span class="label reveal">Nigeria Enquiries</span>
+          <h2 class="contact__info-title reveal reveal-delay-1" id="contact-heading-ng">
+            Talk to our<br><em>Nigeria team.</em>
+          </h2>
+          <p class="contact__info-body reveal reveal-delay-2">
+            Ready to explore a project, partnership, or investment in Nigeria? We would love to connect.
           </p>
-
-          <div class="contact__detail">
-            <div class="contact__detail-icon" aria-hidden="true">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
+          <div class="contact__detail reveal reveal-delay-3">
+            <div class="contact__detail-icon"><i class="fa-solid fa-envelope"></i></div>
             <div>
               <div class="contact__detail-label">Email</div>
               <div class="contact__detail-value">ng@haliteandember.com</div>
             </div>
           </div>
-
-          <div class="contact__detail">
-            <div class="contact__detail-icon" aria-hidden="true">
-              <i class="fa-solid fa-building"></i>
-            </div>
+          <div class="contact__detail reveal reveal-delay-4">
+            <div class="contact__detail-icon"><i class="fa-solid fa-location-dot"></i></div>
             <div>
-              <div class="contact__detail-label">Entity</div>
-              <div class="contact__detail-value">Halite &amp; Ember Nigeria Ltd</div>
-            </div>
-          </div>
-
-          <div class="contact__detail">
-            <div class="contact__detail-icon" aria-hidden="true">
-              <i class="fa-solid fa-flag"></i>
-            </div>
-            <div>
-              <div class="contact__detail-label">Registered</div>
-              <div class="contact__detail-value">Federal Republic of Nigeria</div>
-            </div>
-          </div>
-
-          <div class="contact__detail">
-            <div class="contact__detail-icon" aria-hidden="true">
-              <i class="fa-solid fa-phone"></i>
-            </div>
-            <div>
-              <div class="contact__detail-label">Phone</div>
-              <div class="contact__detail-value">+234 816 725 9681</div>
+              <div class="contact__detail-label">Base</div>
+              <div class="contact__detail-value">Lagos &amp; Abuja, Nigeria</div>
             </div>
           </div>
         </div>
 
-        <div class="contact__form-wrap reveal reveal-delay-2">
-          <form id="contact-form" novalidate>
-
-            <div class="form__row">
-              <div class="form__group">
-                <label for="contact-name" class="form__label">Full Name <span style="color:var(--accent)">*</span></label>
-                <input
-                  type="text"
-                  id="contact-name"
-                  name="contact-name"
-                  class="form__input"
-                  placeholder="Your name"
-                  required
-                  autocomplete="name"
-                />
-              </div>
-              <div class="form__group">
-                <label for="contact-email" class="form__label">Email Address <span style="color:var(--accent)">*</span></label>
-                <input
-                  type="email"
-                  id="contact-email"
-                  name="contact-email"
-                  class="form__input"
-                  placeholder="your@email.com"
-                  required
-                  autocomplete="email"
-                />
-              </div>
+        <form class="contact__form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Full Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="contact-name" name="user_name" class="form-input" placeholder="Amara Obi" autocomplete="name" required />
             </div>
-
-            <div class="form__group">
-              <label for="contact-project" class="form__label">Enquiry Type <span style="color:var(--accent)">*</span></label>
-              <select id="contact-project" name="contact-project" class="form__select" required>
-                <option value="" disabled selected>Select a topic</option>
-                <option value="Nigeria - Property Acquisition">Property Acquisition</option>
-                <option value="Nigeria - Property Management">Property Management</option>
-                <option value="Nigeria - Diaspora Investment">Diaspora Investment Support</option>
-                <option value="Nigeria - Due Diligence">Due Diligence &amp; Verification</option>
-                <option value="Nigeria - Development Support">Development Support</option>
-                <option value="Nigeria - General Enquiry">General Enquiry</option>
-              </select>
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email Address <span aria-hidden="true">*</span></label>
+              <input type="email" id="contact-email" name="user_email" class="form-input" placeholder="amara@example.com" autocomplete="email" required />
             </div>
+          </div>
 
-            <div class="form__group">
-              <label for="contact-textarea" class="form__label">Message</label>
-              <textarea
-                id="contact-textarea"
-                name="message"
-                class="form__textarea"
-                placeholder="Tell us more about your property needs in Nigeria..."
-                rows="5"
-              ></textarea>
-            </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-project">Service Area <span aria-hidden="true">*</span></label>
+            <select id="contact-project" name="user_subject" class="form-select" required>
+              <option value="" disabled selected>Select a service area</option>
+              <option value="IT Services (Nigeria)">IT Services</option>
+              <option value="Real Estate (Nigeria)">Real Estate</option>
+              <option value="Management Consultancy (Nigeria)">Management Consultancy</option>
+              <option value="Business Support (Nigeria)">Business Support</option>
+              <option value="General Enquiry (Nigeria)">General Enquiry</option>
+            </select>
+          </div>
 
-            <button type="submit" class="form__submit">
-              <i class="fa-solid fa-paper-plane"></i>
-              <span class="btn-text">Send Message</span>
-            </button>
+          <div class="form-group">
+            <label class="form-label" for="contact-text">Message</label>
+            <textarea id="contact-text" name="user_message" class="form-textarea" placeholder="Tell us about your project or enquiry…" rows="5"></textarea>
+          </div>
 
-            <p id="contact-message" aria-live="polite"></p>
-
-          </form>
-        </div>
-
+          <button type="submit" class="form-submit">
+            <span class="btn-text">Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <p id="contact-message" aria-live="polite"></p>
+        </form>
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ========== FOOTER ========== -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__main">
-
         <div class="footer__brand">
-          <img src="assets/img/logo-dark.png" alt="Halite & Ember" class="footer__logo logo-for-dark" />
-          
-          <p class="footer__tagline">
-            "We are the salt of the earth and the light of the world. By preserving value and radiating light, we shape lasting legacies."
-          </p>
-          <div class="footer__socials" aria-label="Social media links">
-            <a href="#" class="footer__social" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" class="footer__social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="footer__social" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <img src="assets/img/logo-dark.png" alt="Halite &amp; Ember" class="footer__logo logo-dark" />
+          <img src="assets/img/logo-light.png" alt="Halite &amp; Ember" class="footer__logo logo-light" />
+          <p class="footer__tagline">We are the salt of the earth and the light of the world. By preserving value and radiating light, we shape lasting legacies.</p>
+          <div class="footer__socials">
+            <a href="https://www.linkedin.com/in/haliteandember" class="footer__social" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/haliteandember" class="footer__social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/haliteandember" class="footer__social" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
           </div>
         </div>
-
-        <div>
-          <h3 class="footer__col-title">Company</h3>
+        <div class="footer__col">
+          <div class="footer__col-title">Nigeria Services</div>
           <ul class="footer__links" role="list">
-            <li><a href="index.html#about" class="footer__link">About Us</a></li>
-            <li><a href="index.html#values" class="footer__link">Our Values</a></li>
-            <li><a href="#ng-services" class="footer__link">Nigeria Services</a></li>
-            <li><a href="#contact" class="footer__link">Contact</a></li>
+            <li><a href="#services" class="footer__link">IT Services</a></li>
+            <li><a href="#services" class="footer__link">Real Estate</a></li>
+            <li><a href="#services" class="footer__link">Management Consultancy</a></li>
+            <li><a href="#services" class="footer__link">Business Support</a></li>
           </ul>
         </div>
-
-        <div>
-          <h3 class="footer__col-title">Our Markets</h3>
+        <div class="footer__col">
+          <div class="footer__col-title">Navigate</div>
           <ul class="footer__links" role="list">
-            <li><a href="uk.html" class="footer__link">🇬🇧 United Kingdom</a></li>
-            <li><a href="nigeria.html" class="footer__link">🇳🇬 Nigeria</a></li>
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="uk.html" class="footer__link">United Kingdom</a></li>
+            <li><a href="#contact" class="footer__link">Contact Nigeria Team</a></li>
           </ul>
         </div>
-
       </div>
-
       <div class="footer__bottom">
-        <p class="footer__copyright">
-          &copy; <span id="year"></span> Halite &amp; Ember Nigeria Ltd. Registered in Nigeria. RC: 9104808
-        </p>
-        <nav class="footer__bottom-links" aria-label="Legal links">
-          <a href="#" class="footer__bottom-link">Privacy Policy</a>
-          <a href="#" class="footer__bottom-link">Terms of Use</a>
-        </nav>
+        <span class="footer__copy">&copy; <span class="footer-year">2026</span> Halite &amp; Ember. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer__legal-link">Terms of Use</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="assets/js/main.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
 </body>
 </html>
