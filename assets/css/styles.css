@@ -1951,7 +1951,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   /* Carousel — mobile */
   .carousel { min-height: 100svh; }
   .carousel__slide-inner { padding-bottom: 5.5rem; }
-  .cs1__logo { width: 70vw; height: auto; margin-top: -32vw; margin-bottom: -20vw; }
+  .cs1__logo { width: 70vw; height: auto; margin-top: -32vw; margin-bottom: -15vw; }
   .cs1__sub { max-width: 100%; }
   .cs1__actions { flex-direction: column; }
   .cs1__actions .btn { width: 100%; justify-content: center; }
